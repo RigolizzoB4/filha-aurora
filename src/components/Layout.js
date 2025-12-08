@@ -30,11 +30,11 @@ const Layout = ({ children }) => {
         <div className="container-custom px-[200px]">
           <div className="flex items-center justify-between h-[100px]">
             {/* Logo à esquerda */}
-            <Link to="/" className="flex items-center relative -my-10">
+            <Link to="/" className="flex items-center relative -my-20">
               <img
                 src="/logo-b4-new.svg"
                 alt="B4 Soluções Financeiras"
-                className="h-[180px] w-auto"
+                className="h-[300px] w-auto"
               />
             </Link>
 
