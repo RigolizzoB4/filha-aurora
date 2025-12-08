@@ -128,3 +128,5 @@ Para suporte, entre em contato através da página de contato ou abra uma issue 
 ---
 
 **Desenvolvido com ❤️ para excelência em serviços financeiros**
+
+
