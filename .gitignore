@@ -47,3 +47,4 @@ yarn.lock
 .browser_data_dir/
 .config/
 .local/
+.env
