@@ -107,41 +107,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-
-      {/* CTA Final - Transforme seu Negócio */}
-      <section className="cta-final-section">
-        <div className="container-custom">
-          <div className="cta-final-container">
-            {/* Lado Esquerdo - Título e Botões */}
-            <div className="cta-left-content">
-              <h2>Transforme seu imóvel em capital de giro ou investimento</h2>
-              <div className="cta-buttons">
-                <Link to="/contato" className="btn-cta-primary">
-                  <span>Fale Conosco</span>
-                  <span className="arrow-icon">→</span>
-                </Link>
-                <a href="tel:+551937514300" className="btn-cta-phone">
-                  <Phone className="phone-icon" size={20} />
-                  <span>(19) 3751-4300</span>
-                </a>
-              </div>
-            </div>
-
-            {/* Lado Direito - Card Flutuante */}
-            <div className="cta-floating-card">
-              <TrendingUp className="cta-card-icon" size={48} strokeWidth={2} />
-              <h3 className="cta-card-title">Crédito Aprovado</h3>
-              <p className="cta-card-subtitle">Até 60% do valor do imóvel disponível para sua empresa crescer</p>
-              <ul className="cta-card-features">
-                <li>Valores disponíveis a partir de R$ 100 mil</li>
-                <li>Taxas competitivas do mercado</li>
-                <li>Análise ágil e aprovação rápida</li>
-                <li>Sem complicações burocráticas</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
   );
 };

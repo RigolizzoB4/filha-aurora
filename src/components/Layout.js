@@ -27,14 +27,14 @@ const Layout = ({ children }) => {
     <div className="min-h-screen bg-white">
       {/* Header */}
       <header className={`fixed w-full top-0 z-50 bg-white shadow-md header-bar`}>
-        <div className="container-custom">
-          <div className="flex items-center justify-between h-[80px]">
+        <div className="container-custom px-[200px]">
+          <div className="flex items-center justify-between h-[200px]">
             {/* Logo à esquerda */}
             <Link to="/" className="flex items-center">
               <img
                 src="/logo-b4-new.svg"
                 alt="B4 Soluções Financeiras"
-                className="h-[60px] w-auto"
+                className="h-[180px] w-auto"
               />
             </Link>
 
@@ -83,7 +83,7 @@ const Layout = ({ children }) => {
       </header>
 
       {/* Main Content */}
-      <main className="pt-[80px]">
+      <main className="pt-[200px]">
         {children}
       </main>
 
