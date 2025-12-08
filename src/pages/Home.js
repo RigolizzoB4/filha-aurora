@@ -90,17 +90,36 @@ const Home = () => {
       {/* Conheça o Grupo B4 */}
       <section className="section-padding section-orange">
         <div className="container-custom">
-          <div className="flex flex-col lg:flex-row-reverse items-center gap-12">
-            <div className="lg:w-1/2 text-white">
+          <div className="flex flex-col md:flex-row items-center gap-12">
+            {/* IMAGEM – FICA À ESQUERDA A PARTIR DO MD */}
+            <div className="w-full md:w-1/2">
+              <img
+                src="https://customer-assets.emergentagent.com/job_finance-solutions-1/artifacts/cfpnf5sv_frente%20vista%20de%20lado.png"
+                alt="Grupo B4"
+                className="rounded-2xl shadow-2xl w-full h-full object-cover"
+              />
+            </div>
+
+            {/* TEXTO – FICA À DIREITA A PARTIR DO MD */}
+            <div className="w-full md:w-1/2 text-white">
               <h2 className="text-4xl font-bold mb-4">
-                <span className="text-white">Conheça o Grupo</span> <span className="px-2 rounded-md bg-white/15 text-white">B4</span>
+                <span className="text-white">Conheça o Grupo</span>{" "}
+                <span className="px-2 rounded-md bg-white/15 text-white">B4</span>
               </h2>
+
               <p className="text-white/90 mb-4 text-base leading-relaxed">
-                O Grupo B4 nasce da união de sócios com décadas de experiência em crédito, fomento mercantil e gestão de investimentos. A partir de Campinas, no estado de São Paulo, o grupo atua em todo o território nacional, combinando tradição, tecnologia e governança sólida para potencializar o sucesso financeiro de seus clientes.
+                O Grupo B4 nasce da união de sócios com décadas de experiência em crédito,
+                fomento mercantil e gestão de investimentos. A partir de Campinas, no estado
+                de São Paulo, o grupo atua em todo o território nacional, combinando tradição,
+                tecnologia e governança sólida para potencializar o sucesso financeiro de seus clientes.
               </p>
+
               <p className="text-white/90 mb-6 text-base leading-relaxed">
-                A B4 Soluções Financeiras é a empresa do grupo focada em assessoria e intermediação de crédito, aproximando empresas e pessoas físicas das melhores alternativas de financiamento no sistema financeiro e no mercado de capitais.
+                A B4 Soluções Financeiras é a empresa do grupo focada em assessoria e
+                intermediação de crédito, aproximando empresas e pessoas físicas das melhores
+                alternativas de financiamento no sistema financeiro e no mercado de capitais.
               </p>
+
               <ul className="text-white/90 space-y-2 text-base">
                 <li>• Mais de 25 anos de atuação em operações de crédito, fomento mercantil e fundos de investimento.</li>
                 <li>• História consolidada, iniciada em 1995 e continuamente lapidada com foco no mercado financeiro.</li>
@@ -108,9 +127,6 @@ const Home = () => {
                 <li>• Time especializado, com dezenas de profissionais dedicados à saúde financeira de milhares de empresas.</li>
                 <li>• Compromisso com crescimento sustentável, unindo tradição, inovação e ética em todas as etapas das operações.</li>
               </ul>
-            </div>
-            <div className="lg:w-1/2">
-              <img src="https://customer-assets.emergentagent.com/job_finance-solutions-1/artifacts/cfpnf5sv_frente%20vista%20de%20lado.png" alt="Grupo B4" className="rounded-2xl shadow-2xl w-full h-full object-cover" />
             </div>
           </div>
         </div>
