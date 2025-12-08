@@ -68,18 +68,18 @@ const Layout = ({ children }) => {
           </nav>
 
           {/* ÍCONES SOCIAIS - Quadrado 2x2 */}
-          <div className="grid grid-cols-2 gap-2.5 text-[#f3ad3c]">
+          <div className="grid grid-cols-2 gap-3 text-[#f3ad3c]">
             <a href="https://www.instagram.com/" target="_blank" rel="noreferrer" aria-label="Instagram" className="transition-all hover:scale-110">
-              <Instagram size={22} strokeWidth={1.5} />
+              <Instagram size={28} strokeWidth={1.5} />
             </a>
             <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer" aria-label="LinkedIn" className="transition-all hover:scale-110">
-              <Linkedin size={22} strokeWidth={1.5} />
+              <Linkedin size={28} strokeWidth={1.5} />
             </a>
             <a href="https://www.youtube.com/" target="_blank" rel="noreferrer" aria-label="YouTube" className="transition-all hover:scale-110">
-              <Youtube size={22} strokeWidth={1.5} />
+              <Youtube size={28} strokeWidth={1.5} />
             </a>
             <a href="https://www.facebook.com/" target="_blank" rel="noreferrer" aria-label="Facebook" className="transition-all hover:scale-110">
-              <Facebook size={22} strokeWidth={1.5} />
+              <Facebook size={28} strokeWidth={1.5} />
             </a>
           </div>
         </div>
