@@ -27,19 +27,20 @@ const Layout = ({ children }) => {
     <div className="min-h-screen bg-white">
       {/* Header */}
       <header className={`fixed w-full top-0 z-50 bg-white shadow-md header-bar`}>
-        <div className="container-custom px-[200px]">
-          <div className="flex items-center justify-between h-[100px]">
+        <div className="max-w-full px-[150px]">
+          <div className="flex items-center justify-between h-[104px]">
             {/* Logo à esquerda */}
-            <Link to="/" className="flex items-center relative -my-20">
+            <Link to="/" className="flex items-center relative -my-20 flex-shrink-0">
               <img
                 src="/logo-b4-new.svg"
                 alt="B4 Soluções Financeiras"
-                className="h-[300px] w-auto"
+                className="h-[298px] w-auto"
+                style={{ filter: 'contrast(1.1) saturate(1.2)' }}
               />
             </Link>
 
             {/* Navegação central */}
-            <nav className="hidden lg:flex items-center space-x-8">
+            <nav className="hidden lg:flex items-center space-x-10 flex-1 justify-center mx-8">
               <Link to="/" className={`${linkBase} text-[15px] font-semibold tracking-wide ${isActivePath('/') ? 'nav-link-active' : ''}`}>Início</Link>
               <Link to="/quem-somos" className={`${linkBase} text-[15px] font-semibold tracking-wide ${isActivePath('/quem-somos') ? 'nav-link-active' : ''}`}>Quem Somos</Link>
               <div className="relative"
@@ -66,13 +67,21 @@ const Layout = ({ children }) => {
               <Link to="/contato" className={`${linkBase} text-[15px] font-semibold tracking-wide ${isActivePath('/contato') ? 'nav-link-active' : ''}`}>Contato</Link>
             </nav>
 
-            {/* Redes sociais à direita (2x2) */}
-            <div className="flex items-center gap-4">
-              <div className="hidden lg:grid grid-cols-2 gap-2 text-[var(--b4-saffron)]">
-                <a href="https://www.instagram.com/" target="_blank" rel="noreferrer" aria-label="Instagram" className="transition-transform hover:-translate-y-0.5"><Instagram size={20} /></a>
-                <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer" aria-label="LinkedIn" className="transition-transform hover:-translate-y-0.5"><Linkedin size={20} /></a>
-                <a href="https://www.youtube.com/" target="_blank" rel="noreferrer" aria-label="YouTube" className="transition-transform hover:-translate-y-0.5"><Youtube size={20} /></a>
-                <a href="https://www.facebook.com/" target="_blank" rel="noreferrer" aria-label="Facebook" className="transition-transform hover:-translate-y-0.5"><Facebook size={20} /></a>
+            {/* Redes sociais à direita */}
+            <div className="flex items-center gap-4 flex-shrink-0">
+              <div className="hidden lg:grid grid-cols-2 gap-x-4 gap-y-3 text-[var(--b4-saffron)]">
+                <a href="https://www.instagram.com/" target="_blank" rel="noreferrer" aria-label="Instagram" className="transition-all hover:scale-110 hover:text-[#f3ad3c]">
+                  <Instagram size={22} strokeWidth={1.5} />
+                </a>
+                <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer" aria-label="LinkedIn" className="transition-all hover:scale-110 hover:text-[#f3ad3c]">
+                  <Linkedin size={22} strokeWidth={1.5} />
+                </a>
+                <a href="https://www.youtube.com/" target="_blank" rel="noreferrer" aria-label="YouTube" className="transition-all hover:scale-110 hover:text-[#f3ad3c]">
+                  <Youtube size={22} strokeWidth={1.5} />
+                </a>
+                <a href="https://www.facebook.com/" target="_blank" rel="noreferrer" aria-label="Facebook" className="transition-all hover:scale-110 hover:text-[#f3ad3c]">
+                  <Facebook size={22} strokeWidth={1.5} />
+                </a>
               </div>
               <button onClick={() => setIsMenuOpen(!isMenuOpen)} className={`lg:hidden p-2 rounded-md text-gray-700 hover:bg-gray-100`}>
                 {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -83,7 +92,7 @@ const Layout = ({ children }) => {
       </header>
 
       {/* Main Content */}
-      <main className="pt-[100px]">
+      <main className="pt-[104px]">
         {children}
       </main>
 
