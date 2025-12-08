@@ -4,10 +4,9 @@ import { CheckCircle, Users, Target, ChevronLeft, ChevronRight, Phone, TrendingU
 
 const HeroCarousel = () => {
   const slides = useMemo(() => ([
-    { img: 'https://customer-assets.emergentagent.com/job_finance-solutions-1/artifacts/zkqbmno5_Generated%20Image%20October%2002%2C%202025%20-%202_48AM.png', alt: 'Fachada com blur laranja', phrase: { pre: 'Crédito com segurança e ', highlight: 'agilidade', post: ' para sua empresa' }, pos: 'center' },
-    { img: 'https://customer-assets.emergentagent.com/job_finance-solutions-1/artifacts/6l04g3ky_Generated%20Image%20October%2002%2C%202025%20-%202_48AM.png', alt: 'Equipe com blur laranja', phrase: { pre: 'Estruturação financeira que ', highlight: 'impulsiona', post: ' decisões' }, pos: 'center top' },
-    { img: 'https://customer-assets.emergentagent.com/job_finance-solutions-1/artifacts/54hj098q_Generated%20Image%20October%2002%2C%202025%20-%203_54AM%20%281%29.png', alt: 'Cambuí Corporate com filtro laranja', phrase: { pre: 'Especialistas em viabilizar o seu ', highlight: 'próximo', post: ' passo' }, pos: 'center' },
-    { img: 'https://customer-assets.emergentagent.com/job_finance-solutions-1/artifacts/d06ow8hl_Generated%20Image%20October%2002%2C%202025%20-%203_46AM%20%281%29.png', alt: 'Vista aérea Cambuí com overlay laranja', phrase: { pre: 'Capital inteligente para ', highlight: 'impulsionar', post: ' seus projetos' }, pos: 'center' },
+    { img: '/aperto.jpg', alt: 'Equipe em reunião de negócios', phrase: { pre: 'Crédito com segurança e ', highlight: 'agilidade', post: ' para sua empresa' }, pos: 'center' },
+    { img: '/assinatura.png', alt: 'Assinatura de contrato', phrase: { pre: 'Estruturação financeira que ', highlight: 'impulsiona', post: ' decisões' }, pos: 'center' },
+    { img: '/amarelo_.png', alt: 'Edifício corporativo', phrase: { pre: 'Especialistas em viabilizar o seu ', highlight: 'próximo', post: ' passo' }, pos: 'center' },
   ]), []);
 
   const [index, setIndex] = useState(0);
