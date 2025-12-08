@@ -28,20 +28,20 @@ const Layout = ({ children }) => {
       {/* Header */}
       <header className={`fixed w-full top-0 z-50 bg-white shadow-md header-bar`}>
         <div className="container-custom">
-          <div className="flex items-center justify-between h-[100px] relative">
-            {/* Logo à esquerda - extravasa do header */}
-            <div className="pl-[40px] absolute left-0 top-1/2 -translate-y-1/2 z-10">
+          <div className="flex items-center justify-between h-[80px] relative">
+            {/* Logo à esquerda */}
+            <div className="pl-[40px] flex items-center">
               <Link to="/" className="flex items-center">
                 <img
                   src="/logo-b4-new.svg"
                   alt="B4 Soluções Financeiras"
-                  className="h-[110px] w-auto"
+                  className="h-[180px] w-auto"
                 />
               </Link>
             </div>
 
             {/* Navegação central */}
-            <div className="hidden lg:flex flex-1 justify-center ml-[220px]">
+            <div className="hidden lg:flex flex-1 justify-center ml-[180px]">
               <nav className="flex items-center space-x-12">
                 <Link to="/" className={`${linkBase} text-[17px] font-semibold tracking-wide ${isActivePath('/') ? 'nav-link-active' : ''}`}>Início</Link>
                 <Link to="/quem-somos" className={`${linkBase} text-[17px] font-semibold tracking-wide ${isActivePath('/quem-somos') ? 'nav-link-active' : ''}`}>Quem Somos</Link>
@@ -88,7 +88,7 @@ const Layout = ({ children }) => {
       </header>
 
       {/* Main Content */}
-      <main className="pt-[100px]">
+      <main className="pt-[80px]">
         {children}
       </main>
 
