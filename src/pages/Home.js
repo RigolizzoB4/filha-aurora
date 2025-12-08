@@ -95,8 +95,8 @@ const Home = () => {
               <h2 className="text-4xl font-bold mb-4">
                 <span className="text-white">Conheça o Grupo</span> <span className="px-2 rounded-md bg-white/15 text-white">B4</span>
               </h2>
-              <p className="text-white/95 mb-5 text-lg">A B4 Soluções Financeiras é uma das principais empresas do Grupo B4, com atuação robusta em soluções de crédito e captação para empresas.</p>
-              <ul className="text-white/95 space-y-2 text-base">
+              <p className="text-white/90 mb-5 text-lg">A B4 Soluções Financeiras é uma das principais empresas do Grupo B4, com atuação robusta em soluções de crédito e captação para empresas.</p>
+              <ul className="text-white/90 space-y-2 text-base">
                 <li>• Mais de uma década conectando clientes às melhores soluções financeiras do mercado.</li>
                 <li>• Amplo portfólio de produtos para atender diferentes perfis empresariais.</li>
                 <li>• Rede de parcerias com os principais bancos e instituições financeiras.</li>
