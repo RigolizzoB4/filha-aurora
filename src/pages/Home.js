@@ -95,13 +95,18 @@ const Home = () => {
               <h2 className="text-4xl font-bold mb-4">
                 <span className="text-white">Conheça o Grupo</span> <span className="px-2 rounded-md bg-white/15 text-white">B4</span>
               </h2>
-              <p className="text-white/90 mb-5 text-lg">A B4 Soluções Financeiras é uma das principais empresas do Grupo B4, com atuação robusta em soluções de crédito e captação para empresas.</p>
+              <p className="text-white/90 mb-4 text-base leading-relaxed">
+                O Grupo B4 nasce da união de sócios com décadas de experiência em crédito, fomento mercantil e gestão de investimentos. A partir de Campinas, no estado de São Paulo, o grupo atua em todo o território nacional, combinando tradição, tecnologia e governança sólida para potencializar o sucesso financeiro de seus clientes.
+              </p>
+              <p className="text-white/90 mb-6 text-base leading-relaxed">
+                A B4 Soluções Financeiras é a empresa do grupo focada em assessoria e intermediação de crédito, aproximando empresas e pessoas físicas das melhores alternativas de financiamento no sistema financeiro e no mercado de capitais.
+              </p>
               <ul className="text-white/90 space-y-2 text-base">
-                <li>• Mais de uma década conectando clientes às melhores soluções financeiras do mercado.</li>
-                <li>• Amplo portfólio de produtos para atender diferentes perfis empresariais.</li>
-                <li>• Rede de parcerias com os principais bancos e instituições financeiras.</li>
-                <li>• Atuação em operações de crédito, fomento mercantil e fundos de investimento.</li>
-                <li>• Matriz em Campinas/SP – Av. Coronel Silva Teles, 1002.</li>
+                <li>• Mais de 25 anos de atuação em operações de crédito, fomento mercantil e fundos de investimento.</li>
+                <li>• História consolidada, iniciada em 1995 e continuamente lapidada com foco no mercado financeiro.</li>
+                <li>• Presença nacional, com sede em Campinas/SP – Av. Coronel Silva Teles, 1002.</li>
+                <li>• Time especializado, com dezenas de profissionais dedicados à saúde financeira de milhares de empresas.</li>
+                <li>• Compromisso com crescimento sustentável, unindo tradição, inovação e ética em todas as etapas das operações.</li>
               </ul>
             </div>
             <div className="relative h-full">
