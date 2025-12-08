@@ -71,10 +71,13 @@ const Home = () => {
               <h2 className="text-4xl font-bold mb-6">
                 <span className="text-[var(--b4-gray)]">B4</span> <span className="text-[var(--b4-saffron)]">Soluções Financeiras</span>
               </h2>
+              <p className="text-[var(--b4-gray)] leading-relaxed mb-8 text-base">
+                A B4 Soluções Financeiras conecta empresas e pessoas às melhores oportunidades de captação de recursos, de forma ágil e estratégica. Atuamos ao lado do cliente antes, durante e depois da operação para que cada decisão financeira seja segura, sustentável e alinhada às necessidades do negócio.
+              </p>
               <div className="space-y-6 text-[var(--b4-gray)] leading-relaxed">
-                <div className="flex items-start"><CheckCircle className="h-6 w-6 text-[var(--b4-saffron)] mt-1 mr-4 flex-shrink-0" /><p className="text-base">Experiência comprovada – Mais de 15 anos conectando clientes às melhores oportunidades de crédito.</p></div>
-                <div className="flex items-start"><Users className="h-6 w-6 text-[var(--b4-saffron)] mt-1 mr-4 flex-shrink-0" /><p className="text-base">Atendimento personalizado – Soluções sob medida e acompanhamento próximo.</p></div>
-                <div className="flex items-start"><Target className="h-6 w-6 text-[var(--b4-saffron)] mt-1 mr-4 flex-shrink-0" /><p className="text-base">Foco em resultados – Agilidade e eficiência para garantir a aprovação do crédito.</p></div>
+                <div className="flex items-start"><CheckCircle className="h-6 w-6 text-[var(--b4-saffron)] mt-1 mr-4 flex-shrink-0" /><p className="text-base"><strong>Experiência comprovada</strong> – Mais de 15 anos conectando clientes às melhores oportunidades de crédito.</p></div>
+                <div className="flex items-start"><Users className="h-6 w-6 text-[var(--b4-saffron)] mt-1 mr-4 flex-shrink-0" /><p className="text-base"><strong>Atendimento personalizado</strong> – Soluções sob medida e acompanhamento próximo.</p></div>
+                <div className="flex items-start"><Target className="h-6 w-6 text-[var(--b4-saffron)] mt-1 mr-4 flex-shrink-0" /><p className="text-base"><strong>Foco em resultados</strong> – Agilidade e eficiência para garantir a aprovação do crédito.</p></div>
               </div>
             </div>
             <div className="relative h-full">
