@@ -1,0 +1,47 @@
+{
+  "version": "1.0.0",
+  "name": "filha-aurora",
+  "description": "AURORA - Plataforma de Serviços Financeiros",
+  "protection": {
+    "enabled": true,
+    "requireConfirmation": true,
+    "confirmationMessage": "⚠️ ATENÇÃO: Você está prestes a fazer alterações no projeto AURORA. Todas as modificações requerem confirmação explícita do proprietário.",
+    "protectedPaths": [
+      "src/**",
+      "public/**",
+      "package.json",
+      "README.md",
+      ".gitignore",
+      "craco.config.js",
+      "tailwind.config.js",
+      "jsconfig.json",
+      "postcss.config.js"
+    ],
+    "allowedOperations": [
+      "read",
+      "preview"
+    ],
+    "restrictedOperations": [
+      "delete",
+      "modify",
+      "create",
+      "rename"
+    ]
+  },
+  "ai": {
+    "instructions": "Este é um projeto de produção. Não faça alterações sem confirmação explícita do usuário. Sempre pergunte antes de modificar qualquer arquivo.",
+    "constraints": [
+      "Não modifique package.json sem aprovação",
+      "Não altere a estrutura de pastas",
+      "Não remova dependências",
+      "Sempre confirme antes de fazer commits",
+      "Mantenha a compatibilidade com React 19.0.0"
+    ]
+  },
+  "git": {
+    "requirePullRequest": true,
+    "requireReview": true,
+    "autoCommit": false,
+    "commitMessage": "REQUER CONFIRMAÇÃO: [Descrição da mudança]"
+  }
+}

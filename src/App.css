@@ -1,0 +1,218 @@
+/* B4 Soluções Financeiras - Estilos customizados */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+* { box-sizing: border-box; }
+
+body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif; margin: 0; padding: 0; line-height: 1.6; color: #333; font-size: 16px; }
+
+.App { min-height: 100vh; }
+
+.logo-img { image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges; }
+
+/* Brand Palette (site inteiro) - Nova Paleta Oficial B4 */
+:root {
+  --b4-saffron: #f3ad3c;      /* Açafrão - cor de destaque principal */
+  --b4-desert-storm: #f6f6f5; /* Tempestade no Deserto - off-white/fundos claros */
+  --b4-gray: #838383;         /* Cinza - textos principais */
+  --b4-nickel-gray: #babcb4;  /* Níquel Cinza - bordas/textos sutis */
+  --b4-white: #FFFFFF;        /* Branco puro */
+  
+  /* Aliases para compatibilidade */
+  --b4-orange: #f3ad3c;       /* Mapeado para Açafrão */
+  --b4-off-white: #f6f6f5;    /* Mapeado para Tempestade no Deserto */
+  --b4-text-dark: #838383;    /* Mapeado para Cinza */
+  --b4-text-muted: #babcb4;   /* Mapeado para Níquel Cinza */
+}
+
+/* Hero legibilidade */
+.hero-readable-shadow { text-shadow: 0 2px 12px rgba(0,0,0,.35); }
+
+/* Container máximo */
+.container-custom { max-width: 1328px; margin: 0 auto; padding: 0 1rem; }
+
+/* Header dimensions */
+.header-bar { height: 200px; }
+
+/* CTA SPLIT (Insights Financeiros) – fino e comprido, cor da marca */
+.cta-split { position: relative; display: inline-flex; align-items: center; gap: 10px; color: var(--b4-white); }
+.cta-split .cta-left { font-weight: 500; font-size: 16px; color: var(--b4-white); }
+/* Retângulo branco mais curto e fino */
+.cta-split .cta-box { position: relative; display: inline-flex; align-items: center; justify-content: center; height: 38px; padding: 0 30px 0 40px; border: 2px solid #fff; border-radius: 8px; overflow: hidden; }
+/* "Financeiros" (maior que Insights) */
+.cta-split .cta-mais { position: relative; z-index: 1; font-weight: 700; font-size: 18px; color: #fff; }
+.cta-split .cta-line { display: none; }
+/* Quadrado-trilho na cor da marca */
+.cta-split .cta-square { position: absolute; top: 50%; left: 18px; width: 16px; height: 16px; transform: translate(-50%, -50%); border: 2px solid var(--b4-saffron); background: transparent; z-index: 3; }
+/* Mais lento e para antes da borda (gap ~30px) entre texto e borda */
+.cta-split:hover .cta-square { animation: cta-travel 1.6s ease forwards; }
+@keyframes cta-travel { 0% { left: 18px; background: transparent; border-color: var(--b4-saffron); } 92% { left: calc(100% - 44px); background: transparent; border-color: var(--b4-saffron); } 100% { left: calc(100% - 44px); background: var(--b4-saffron); border-color: var(--b4-saffron); } }
+
+/* Overlay de identidade (leve para texto escuro) */
+.hero-orange-overlay { background: linear-gradient(90deg, rgba(0,0,0,0.28) 0%, rgba(0,0,0,0.18) 45%, rgba(0,0,0,0.0) 65%); }
+
+/* Navegação */
+.nav-link-active { color: var(--b4-saffron) !important; font-weight: 600; }
+
+/* Seções padrão */
+.section-padding { padding: 4rem 0; }
+
+/* Títulos e texto padrão */
+h1, h2, h3 { color: var(--b4-gray); }
+p, li, span { color: var(--b4-gray); }
+
+/* Utilitários de seções alternadas */
+.section-orange { background-color: var(--b4-saffron); color: var(--b4-white); }
+
+/* CTA Final Section Styles */
+.cta-final-section {
+  background-color: var(--b4-saffron);
+  padding: 4rem 0;
+  position: relative;
+}
+
+.cta-final-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.cta-left-content h2 {
+  color: var(--b4-gray);
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.cta-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 400px;
+}
+
+.btn-cta-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(246, 246, 245, 0.3);
+  color: var(--b4-saffron);
+  padding: 1rem 1.5rem;
+  border: 1px solid var(--b4-saffron);
+  border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.125rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+}
+
+.btn-cta-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  background-color: rgba(246, 246, 245, 0.4);
+}
+
+.btn-cta-primary .arrow-icon {
+  font-size: 1.5rem;
+  margin-left: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.btn-cta-primary:hover .arrow-icon {
+  transform: translateX(4px);
+}
+
+.btn-cta-phone {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  color: var(--b4-saffron);
+  padding: 1rem 1.5rem;
+  border: 1px solid var(--b4-saffron);
+  border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.125rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-cta-phone:hover {
+  transform: translateY(-2px);
+  background-color: rgba(246, 246, 245, 0.15);
+}
+
+.btn-cta-phone .phone-icon {
+  margin-right: 0.5rem;
+  font-size: 1.25rem;
+}
+
+.cta-floating-card {
+  background-color: var(--b4-desert-storm);
+  border: 1px solid var(--b4-nickel-gray);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  transform: translateY(-10px);
+}
+
+.cta-card-icon {
+  color: var(--b4-saffron);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.cta-card-title {
+  color: var(--b4-gray);
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.cta-card-subtitle {
+  color: var(--b4-gray);
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.cta-card-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cta-card-features li {
+  color: var(--b4-gray);
+  font-size: 0.9375rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--b4-nickel-gray);
+}
+
+.cta-card-features li:last-child {
+  border-bottom: none;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .cta-final-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .cta-floating-card {
+    transform: translateY(0);
+  }
+}
+
+.section-white { background-color: var(--b4-white); color: var(--b4-gray); }
+
+/* Footer */
+.footer-muted { color: #cbd5e1; }
