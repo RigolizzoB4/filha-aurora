@@ -57,9 +57,115 @@ body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Rob
 /* Seções padrão */
 .section-padding { padding: 4rem 0; }
 
-/* Títulos e texto padrão */
-h1, h2, h3 { color: var(--b4-gray); }
-p, li, span { color: var(--b4-gray); }
+/* ========================================
+   SISTEMA DE TIPOGRAFIA B4
+   Manual de estilos para todo o site
+   ======================================== */
+
+/* TÍTULOS PRINCIPAIS (Hero, página inicial) */
+.display-hero {
+  font-size: 3.5rem;        /* 56px */
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--b4-white);
+}
+
+/* TÍTULOS DE SEÇÃO (H1) */
+.heading-xl {
+  font-size: 2.5rem;        /* 40px */
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  color: var(--b4-gray);
+  margin-bottom: 1.5rem;
+}
+
+/* TÍTULOS SECUNDÁRIOS (H2) */
+.heading-lg {
+  font-size: 2rem;          /* 32px */
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--b4-gray);
+  margin-bottom: 1.25rem;
+}
+
+/* TÍTULOS TERCIÁRIOS (H3) */
+.heading-md {
+  font-size: 1.5rem;        /* 24px */
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--b4-gray);
+  margin-bottom: 1rem;
+}
+
+/* TÍTULOS PEQUENOS (H4) */
+.heading-sm {
+  font-size: 1.25rem;       /* 20px */
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--b4-gray);
+  margin-bottom: 0.75rem;
+}
+
+/* TEXTO CORPO - GRANDE (Destaque) */
+.body-lg {
+  font-size: 1.125rem;      /* 18px */
+  font-weight: 400;
+  line-height: 1.7;
+  color: var(--b4-gray);
+}
+
+/* TEXTO CORPO - PADRÃO */
+.body-base {
+  font-size: 1rem;          /* 16px */
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--b4-gray);
+}
+
+/* TEXTO CORPO - PEQUENO */
+.body-sm {
+  font-size: 0.875rem;      /* 14px */
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--b4-gray);
+}
+
+/* PESO DE FONTE */
+.font-light { font-weight: 300; }
+.font-regular { font-weight: 400; }
+.font-medium { font-weight: 500; }
+.font-semibold { font-weight: 600; }
+.font-bold { font-weight: 700; }
+.font-extrabold { font-weight: 800; }
+
+/* COR DE TEXTO */
+.text-primary { color: var(--b4-gray); }
+.text-accent { color: var(--b4-saffron); }
+.text-muted { color: var(--b4-nickel-gray); }
+.text-white { color: var(--b4-white); }
+
+/* ESPAÇAMENTOS PADRONIZADOS */
+.spacing-xs { margin-bottom: 0.5rem; }  /* 8px */
+.spacing-sm { margin-bottom: 1rem; }    /* 16px */
+.spacing-md { margin-bottom: 1.5rem; }  /* 24px */
+.spacing-lg { margin-bottom: 2rem; }    /* 32px */
+.spacing-xl { margin-bottom: 3rem; }    /* 48px */
+
+/* APLICAÇÃO PADRÃO */
+h1 { @apply heading-xl; }
+h2 { @apply heading-lg; }
+h3 { @apply heading-md; }
+h4 { @apply heading-sm; }
+p { @apply body-base; }
+li { @apply body-base; }
+
+/* VARIAÇÃO DE DESTAQUE (estilo hero) */
+.highlight-word {
+  color: var(--b4-saffron);
+  font-weight: inherit;
+}
 
 /* Utilitários de seções alternadas */
 .section-orange { background-color: var(--b4-saffron); color: var(--b4-white); }
