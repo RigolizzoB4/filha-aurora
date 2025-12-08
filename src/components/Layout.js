@@ -28,9 +28,9 @@ const Layout = ({ children }) => {
       {/* Header */}
       <header className={`fixed w-full top-0 z-50 bg-white shadow-md header-bar`}>
         <div className="container-custom px-[200px]">
-          <div className="flex items-center justify-between h-[200px]">
+          <div className="flex items-center justify-between h-[100px]">
             {/* Logo à esquerda */}
-            <Link to="/" className="flex items-center">
+            <Link to="/" className="flex items-center relative -my-10">
               <img
                 src="/logo-b4-new.svg"
                 alt="B4 Soluções Financeiras"
@@ -83,7 +83,7 @@ const Layout = ({ children }) => {
       </header>
 
       {/* Main Content */}
-      <main className="pt-[200px]">
+      <main className="pt-[100px]">
         {children}
       </main>
 
