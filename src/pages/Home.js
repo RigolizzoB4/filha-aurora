@@ -90,11 +90,8 @@ const Home = () => {
       {/* Conheça o Grupo B4 */}
       <section className="section-padding section-orange">
         <div className="container-custom">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="relative h-full lg:order-1">
-              <img src="https://customer-assets.emergentagent.com/job_finance-solutions-1/artifacts/cfpnf5sv_frente%20vista%20de%20lado.png" alt="Grupo B4" className="rounded-2xl shadow-2xl w-full h-full object-cover" />
-            </div>
-            <div className="lg:order-2">
+          <div className="flex flex-col lg:flex-row-reverse items-center gap-12">
+            <div className="lg:w-1/2 text-white">
               <h2 className="text-4xl font-bold mb-4">
                 <span className="text-white">Conheça o Grupo</span> <span className="px-2 rounded-md bg-white/15 text-white">B4</span>
               </h2>
@@ -111,6 +108,9 @@ const Home = () => {
                 <li>• Time especializado, com dezenas de profissionais dedicados à saúde financeira de milhares de empresas.</li>
                 <li>• Compromisso com crescimento sustentável, unindo tradição, inovação e ética em todas as etapas das operações.</li>
               </ul>
+            </div>
+            <div className="lg:w-1/2">
+              <img src="https://customer-assets.emergentagent.com/job_finance-solutions-1/artifacts/cfpnf5sv_frente%20vista%20de%20lado.png" alt="Grupo B4" className="rounded-2xl shadow-2xl w-full h-full object-cover" />
             </div>
           </div>
         </div>
