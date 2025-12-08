@@ -28,59 +28,56 @@ const Layout = ({ children }) => {
       {/* Header */}
       <header className={`fixed w-full top-0 z-50 bg-white shadow-md header-bar`}>
         <div className="container-custom">
-          <div className="flex items-center justify-center h-[80px] relative">
-            {/* Layout centralizado com logo, navegação e redes sociais */}
-            <div className="hidden lg:flex items-center gap-8">
-              {/* Logo */}
-              <Link to="/" className="flex items-center">
-                <img
-                  src="/logo-b4-new.svg"
-                  alt="B4 Soluções Financeiras"
-                  className="h-[60px] w-auto"
-                />
-              </Link>
+          <div className="flex items-center justify-between h-[80px]">
+            {/* Logo à esquerda */}
+            <Link to="/" className="flex items-center">
+              <img
+                src="/logo-b4-new.svg"
+                alt="B4 Soluções Financeiras"
+                className="h-[60px] w-auto"
+              />
+            </Link>
 
-              {/* Navegação */}
-              <nav className="flex items-center space-x-8">
-                <Link to="/" className={`${linkBase} text-[15px] font-semibold tracking-wide ${isActivePath('/') ? 'nav-link-active' : ''}`}>Início</Link>
-                <Link to="/quem-somos" className={`${linkBase} text-[15px] font-semibold tracking-wide ${isActivePath('/quem-somos') ? 'nav-link-active' : ''}`}>Quem Somos</Link>
-                <div className="relative"
-                     onMouseEnter={() => { clearTimeout(closeTimerRef.current); setIsServicesOpen(true); }}
-                     onMouseLeave={() => { closeTimerRef.current = setTimeout(() => setIsServicesOpen(false), 250); }}>
-                  <button onClick={() => setIsServicesOpen((v) => !v)} className={`flex items-center ${linkBase} text-[15px] font-semibold tracking-wide ${isActiveService() ? 'nav-link-active' : ''}`}>
-                    Serviços <ChevronDown className="ml-1 h-4 w-4" />
-                  </button>
-                  {isServicesOpen && (
-                    <div onMouseEnter={() => { clearTimeout(closeTimerRef.current); setIsServicesOpen(true); }}
-                         onMouseLeave={() => { closeTimerRef.current = setTimeout(() => setIsServicesOpen(false), 250); }}
-                         className="absolute top-full left-0 mt-2 w-64 bg-white border border-gray-200 rounded-lg shadow-xl">
-                      <div className="py-2">
-                        {services.map((service) => (
-                          <Link key={service.path} to={service.path} onClick={() => setIsServicesOpen(false)} className={`block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-[var(--b4-saffron)] ${isActivePath(service.path) ? 'bg-orange-50 text-[var(--b4-saffron)]' : ''}`}>
-                            {service.name}
-                          </Link>
-                        ))}
-                      </div>
+            {/* Navegação central */}
+            <nav className="hidden lg:flex items-center space-x-8">
+              <Link to="/" className={`${linkBase} text-[15px] font-semibold tracking-wide ${isActivePath('/') ? 'nav-link-active' : ''}`}>Início</Link>
+              <Link to="/quem-somos" className={`${linkBase} text-[15px] font-semibold tracking-wide ${isActivePath('/quem-somos') ? 'nav-link-active' : ''}`}>Quem Somos</Link>
+              <div className="relative"
+                   onMouseEnter={() => { clearTimeout(closeTimerRef.current); setIsServicesOpen(true); }}
+                   onMouseLeave={() => { closeTimerRef.current = setTimeout(() => setIsServicesOpen(false), 250); }}>
+                <button onClick={() => setIsServicesOpen((v) => !v)} className={`flex items-center ${linkBase} text-[15px] font-semibold tracking-wide ${isActiveService() ? 'nav-link-active' : ''}`}>
+                  Serviços <ChevronDown className="ml-1 h-4 w-4" />
+                </button>
+                {isServicesOpen && (
+                  <div onMouseEnter={() => { clearTimeout(closeTimerRef.current); setIsServicesOpen(true); }}
+                       onMouseLeave={() => { closeTimerRef.current = setTimeout(() => setIsServicesOpen(false), 250); }}
+                       className="absolute top-full left-0 mt-2 w-64 bg-white border border-gray-200 rounded-lg shadow-xl">
+                    <div className="py-2">
+                      {services.map((service) => (
+                        <Link key={service.path} to={service.path} onClick={() => setIsServicesOpen(false)} className={`block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-[var(--b4-saffron)] ${isActivePath(service.path) ? 'bg-orange-50 text-[var(--b4-saffron)]' : ''}`}>
+                          {service.name}
+                        </Link>
+                      ))}
                     </div>
-                  )}
-                </div>
-                <Link to="/insights" className={`${linkBase} text-[15px] font-semibold tracking-wide ${isActivePath('/insights') ? 'nav-link-active' : ''}`}>Insights</Link>
-                <Link to="/contato" className={`${linkBase} text-[15px] font-semibold tracking-wide ${isActivePath('/contato') ? 'nav-link-active' : ''}`}>Contato</Link>
-              </nav>
+                  </div>
+                )}
+              </div>
+              <Link to="/insights" className={`${linkBase} text-[15px] font-semibold tracking-wide ${isActivePath('/insights') ? 'nav-link-active' : ''}`}>Insights</Link>
+              <Link to="/contato" className={`${linkBase} text-[15px] font-semibold tracking-wide ${isActivePath('/contato') ? 'nav-link-active' : ''}`}>Contato</Link>
+            </nav>
 
-              {/* Redes sociais (2x2) */}
-              <div className="grid grid-cols-2 gap-2 text-[var(--b4-saffron)]">
+            {/* Redes sociais à direita (2x2) */}
+            <div className="flex items-center gap-4">
+              <div className="hidden lg:grid grid-cols-2 gap-2 text-[var(--b4-saffron)]">
                 <a href="https://www.instagram.com/" target="_blank" rel="noreferrer" aria-label="Instagram" className="transition-transform hover:-translate-y-0.5"><Instagram size={20} /></a>
                 <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer" aria-label="LinkedIn" className="transition-transform hover:-translate-y-0.5"><Linkedin size={20} /></a>
                 <a href="https://www.youtube.com/" target="_blank" rel="noreferrer" aria-label="YouTube" className="transition-transform hover:-translate-y-0.5"><Youtube size={20} /></a>
                 <a href="https://www.facebook.com/" target="_blank" rel="noreferrer" aria-label="Facebook" className="transition-transform hover:-translate-y-0.5"><Facebook size={20} /></a>
               </div>
+              <button onClick={() => setIsMenuOpen(!isMenuOpen)} className={`lg:hidden p-2 rounded-md text-gray-700 hover:bg-gray-100`}>
+                {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              </button>
             </div>
-
-            {/* Menu mobile */}
-            <button onClick={() => setIsMenuOpen(!isMenuOpen)} className={`lg:hidden p-2 rounded-md text-gray-700 hover:bg-gray-100 absolute right-4`}>
-              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-            </button>
           </div>
         </div>
       </header>
