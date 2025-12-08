@@ -22,7 +22,7 @@ const HeroCarousel = () => {
   }, [index, hover, slides.length]);
 
   return (
-    <section className="relative overflow-hidden h-[calc(100vh-200px)]" onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
+    <section className="relative overflow-hidden h-[calc(100vh-100px)]" onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
       <div className="absolute inset-0">
         {slides.map((s, i) => (
           <div key={i} className={`absolute inset-0 transition-opacity duration-700 ease-out ${i === index ? 'opacity-100' : 'opacity-0'}`} aria-hidden={i !== index}>
