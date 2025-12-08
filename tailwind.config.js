@@ -52,6 +52,12 @@ module.exports = {
   				'3': 'hsl(var(--chart-3))',
   				'4': 'hsl(var(--chart-4))',
   				'5': 'hsl(var(--chart-5))'
+  			},
+  			b4: {
+  				gray: '#838383',
+  				'desert-storm': '#f6f6f5',
+  				saffron: '#f3ad3c',
+  				'gray-nickel': '#babcb4'
   			}
   		},
   		keyframes: {

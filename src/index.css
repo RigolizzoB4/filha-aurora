@@ -45,6 +45,11 @@ code {
         --chart-4: 43 74% 66%;
         --chart-5: 27 87% 67%;
         --radius: 0.5rem;
+
+        --b4-gray: #838383;
+        --b4-desert-storm: #f6f6f5;
+        --b4-saffron: #f3ad3c;
+        --b4-gray-nickel: #babcb4;
     }
   .dark {
         --background: 0 0% 3.9%;
