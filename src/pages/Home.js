@@ -4,7 +4,7 @@ import { CheckCircle, Users, Target, ChevronLeft, ChevronRight, Phone, TrendingU
 
 const HeroCarousel = () => {
   const slides = useMemo(() => ([
-    { img: '/aperto.jpg', alt: 'Equipe em reunião de negócios', phrase: { pre: 'Crédito com segurança e ', highlight: 'agilidade', post: ' para sua empresa' }, pos: 'center' },
+    { img: '/aperto.jpg', alt: 'Equipe em reunião de negócios', phrase: { pre: 'Conectando você ao melhor ', highlight: 'crédito', post: '.' }, pos: 'center' },
     { img: '/assinatura.png', alt: 'Assinatura de contrato', phrase: { pre: 'Estruturação financeira que ', highlight: 'impulsiona', post: ' decisões' }, pos: 'center' },
     { img: '/amarelo_.png', alt: 'Edifício corporativo', phrase: { pre: 'Especialistas em viabilizar o seu ', highlight: 'próximo', post: ' passo' }, pos: 'center' },
   ]), []);
