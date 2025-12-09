@@ -63,11 +63,7 @@ const Home = () => {
   const [showWhatsApp, setShowWhatsApp] = useState(false);
 
   const handleCTAClick = () => {
-    const totalAnimationTime = 2600;
-
-    setTimeout(() => {
-      setShowWhatsApp(true);
-    }, totalAnimationTime);
+    setShowWhatsApp(true);
   };
 
   return (
