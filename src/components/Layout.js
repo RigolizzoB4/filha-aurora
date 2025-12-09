@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
-import { Menu, X, ChevronDown, Phone, Mail, Facebook, Instagram, Linkedin, Youtube } from 'lucide-react';
+import { Menu, X, ChevronDown } from 'lucide-react';
+import { Footer } from './Footer';
 
 const logoB4 = '/logo-b4-new.svg';
 
@@ -91,34 +92,7 @@ const Layout = ({ children }) => {
       </main>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white">
-        <div className="container-custom py-12">
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="md:col-span-1">
-              <img src="https://customer-assets.emergentagent.com/job_finance-solutions-1/artifacts/rpuemvp7_logo%20sem%20fundo.png" alt="B4 Soluções Financeiras" className="h-12 w-auto mb-4 filter brightness-0 invert" />
-              <p className="text-gray-300 mb-4 max-w-md">A B4 Soluções Financeiras conecta empresas e pessoas às melhores oportunidades de captação de recursos, com ética e excelência em todas as etapas.</p>
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold mb-4">Serviços</h3>
-              <ul className="space-y-2">
-                {services.map((service) => (
-                  <li key={service.path}><Link to={service.path} className="text-gray-300 hover:text-[var(--b4-saffron)] transition-colors">{service.name}</Link></li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold mb-4">Contato</h3>
-              <div className="space-y-3">
-                <div className="flex items-center"><Mail className="h-5 w-5 text-[var(--b4-saffron)] mr-3" /><p className="text-gray-300">solucoes.financeiras@b4.com.br</p></div>
-                <div className="flex items-center"><Phone className="h-5 w-5 text-[var(--b4-saffron)] mr-3" /><p className="text-gray-300">(19) 3751-4300</p></div>
-              </div>
-            </div>
-          </div>
-          <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 B4 Soluções Financeiras. Todos os direitos reservados.</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };
