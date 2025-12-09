@@ -6,6 +6,22 @@ import { Instagram, Linkedin, Youtube, Facebook, ChevronDown } from 'lucide-reac
 
 export default function Header() {
   const [servicesOpen, setServicesOpen] = useState(false);
+  const [closeTimeout, setCloseTimeout] = useState(null);
+
+  const handleMouseEnter = () => {
+    if (closeTimeout) {
+      clearTimeout(closeTimeout);
+      setCloseTimeout(null);
+    }
+    setServicesOpen(true);
+  };
+
+  const handleMouseLeave = () => {
+    const timeout = setTimeout(() => {
+      setServicesOpen(false);
+    }, 800);
+    setCloseTimeout(timeout);
+  };
 
   return (
     <header style={{
@@ -68,8 +84,8 @@ export default function Header() {
           {/* Dropdown Serviços */}
           <div
             style={{ position: 'relative', zIndex: 10000 }}
-            onMouseEnter={() => setServicesOpen(true)}
-            onMouseLeave={() => setServicesOpen(false)}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
           >
             <button style={{
               ...buttonStyle,
@@ -157,9 +173,9 @@ export default function Header() {
         {/* ═══ ÍCONES GRID 2×2 ═══ */}
         <div style={{
           display: 'grid',
-          gridTemplateColumns: '40px 40px',
-          gridTemplateRows: '40px 40px',
-          gap: '0',
+          gridTemplateColumns: '36px 36px',
+          gridTemplateRows: '36px 36px',
+          gap: '4px',
           flexShrink: 0
         }}>
 
@@ -229,9 +245,10 @@ function DropdownLink({ href, children }) {
         textDecoration: 'none',
         fontSize: '14px',
         fontWeight: 500,
-        transition: 'all 0.2s ease',
+        transition: 'all 0.3s ease',
         borderLeft: hovered ? '3px solid #f3ae3e' : '3px solid transparent',
-        background: hovered ? '#fef9f0' : 'transparent'
+        background: hovered ? '#fef9f0' : 'transparent',
+        opacity: hovered ? 1 : 0.75
       }}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
@@ -251,12 +268,12 @@ function SocialIcon({ href, Icon }) {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        width: '40px',
-        height: '40px',
+        width: '36px',
+        height: '36px',
         color: '#f3ae3e'
       }}
     >
-      <Icon size={20} strokeWidth={1.5} />
+      <Icon size={18} strokeWidth={1.5} />
     </a>
   );
 }
