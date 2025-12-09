@@ -12,16 +12,16 @@ body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Rob
 
 /* Brand Palette (site inteiro) - Nova Paleta Oficial B4 */
 :root {
-  --b4-saffron: #f3ad3c;      /* Açafrão - cor de destaque principal */
+  --b4-saffron: #f3ae3e;      /* Açafrão - cor de destaque principal */
   --b4-desert-storm: #f6f6f5; /* Tempestade no Deserto - off-white/fundos claros */
-  --b4-gray: #838383;         /* Cinza - textos principais */
+  --b4-gray: #818181;         /* Cinza - textos principais */
   --b4-nickel-gray: #babcb4;  /* Níquel Cinza - bordas/textos sutis */
   --b4-white: #FFFFFF;        /* Branco puro */
-  
+
   /* Aliases para compatibilidade */
-  --b4-orange: #f3ad3c;       /* Mapeado para Açafrão */
+  --b4-orange: #f3ae3e;       /* Mapeado para Açafrão */
   --b4-off-white: #f6f6f5;    /* Mapeado para Tempestade no Deserto */
-  --b4-text-dark: #838383;    /* Mapeado para Cinza */
+  --b4-text-dark: #818181;    /* Mapeado para Cinza */
   --b4-text-muted: #babcb4;   /* Mapeado para Níquel Cinza */
 }
 

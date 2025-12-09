@@ -23,7 +23,7 @@ const Layout = ({ children }) => {
   const isActivePath = (path) => location.pathname === path;
   const isActiveService = () => services.some(service => location.pathname === service.path);
 
-  const linkBase = 'text-[#838383] hover:text-[var(--b4-saffron)]';
+  const linkBase = 'text-[#818181] hover:text-[var(--b4-saffron)]';
 
   return (
     <div className="min-h-screen bg-white">
@@ -40,7 +40,7 @@ const Layout = ({ children }) => {
           </div>
 
           {/* MENU PRINCIPAL */}
-          <nav className="flex items-center gap-8 text-[17px] font-semibold text-[#838383]">
+          <nav className="flex items-center gap-8 text-[17px] font-semibold text-[#818181]">
             <NavLink to="/" className={({ isActive }) => isActive ? 'text-[var(--b4-saffron)]' : 'hover:text-[var(--b4-saffron)]'}>Início</NavLink>
             <NavLink to="/quem-somos" className={({ isActive }) => isActive ? 'text-[var(--b4-saffron)]' : 'hover:text-[var(--b4-saffron)]'}>Quem Somos</NavLink>
             <div className="relative"
@@ -68,7 +68,7 @@ const Layout = ({ children }) => {
           </nav>
 
           {/* ÍCONES SOCIAIS - Quadrado 2x2 */}
-          <div className="grid grid-cols-2 gap-3 text-[#f3ad3c]">
+          <div className="grid grid-cols-2 gap-3 text-[#f3ae3e]">
             <a href="https://www.instagram.com/" target="_blank" rel="noreferrer" aria-label="Instagram" className="transition-all hover:scale-110">
               <Instagram size={28} strokeWidth={1.5} />
             </a>

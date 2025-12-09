@@ -54,9 +54,9 @@ module.exports = {
   				'5': 'hsl(var(--chart-5))'
   			},
   			b4: {
-  				gray: '#838383',
+  				gray: '#818181',
   				'desert-storm': '#f6f6f5',
-  				saffron: '#f3ad3c',
+  				saffron: '#f3ae3e',
   				'gray-nickel': '#babcb4'
   			}
   		},
