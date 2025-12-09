@@ -30,24 +30,24 @@ const Layout = ({ children }) => {
     <div className="min-h-screen bg-white">
       {/* Header */}
       <header className="bg-white shadow-sm">
-        <div className="max-w-[1328px] mx-auto h-[170px] px-10 flex items-center justify-between">
+        <div className="max-w-[1328px] mx-auto h-[100px] px-10 flex items-center justify-between">
           {/* LOGO */}
           <div className="flex items-center">
             <img
               src={logoB4}
               alt="B4 Soluções Financeiras"
-              className="h-[120px] w-auto object-contain"
+              className="h-[70px] w-auto object-contain"
             />
           </div>
 
           {/* MENU PRINCIPAL */}
-          <nav className="flex items-center gap-8 text-[17px] font-semibold text-[#818181]">
+          <nav className="flex items-center gap-6 text-[15px] font-semibold text-[#818181]">
             <NavLink to="/" className={({ isActive }) => isActive ? 'text-[var(--b4-saffron)]' : 'hover:text-[var(--b4-saffron)]'}>Início</NavLink>
             <NavLink to="/quem-somos" className={({ isActive }) => isActive ? 'text-[var(--b4-saffron)]' : 'hover:text-[var(--b4-saffron)]'}>Quem Somos</NavLink>
             <div className="relative"
                  onMouseEnter={() => { clearTimeout(closeTimerRef.current); setIsServicesOpen(true); }}
                  onMouseLeave={() => { closeTimerRef.current = setTimeout(() => setIsServicesOpen(false), 250); }}>
-              <button onClick={() => setIsServicesOpen((v) => !v)} className={`flex items-center hover:text-[var(--b4-saffron)] text-[17px] font-semibold ${isActiveService() ? 'text-[var(--b4-saffron)]' : ''}`}>
+              <button onClick={() => setIsServicesOpen((v) => !v)} className={`flex items-center hover:text-[var(--b4-saffron)] text-[15px] font-semibold ${isActiveService() ? 'text-[var(--b4-saffron)]' : ''}`}>
                 Serviços <ChevronDown className="ml-1 h-4 w-4" />
               </button>
               {isServicesOpen && (
@@ -69,18 +69,18 @@ const Layout = ({ children }) => {
           </nav>
 
           {/* ÍCONES SOCIAIS - Quadrado 2x2 */}
-          <div className="grid grid-cols-2 gap-3 text-[#f3ae3e]">
+          <div className="grid grid-cols-2 gap-2 text-[#f3ae3e]">
             <a href="https://www.instagram.com/" target="_blank" rel="noreferrer" aria-label="Instagram" className="transition-all hover:scale-110">
-              <Instagram size={28} strokeWidth={1.5} />
+              <Instagram size={22} strokeWidth={1.5} />
             </a>
             <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer" aria-label="LinkedIn" className="transition-all hover:scale-110">
-              <Linkedin size={28} strokeWidth={1.5} />
+              <Linkedin size={22} strokeWidth={1.5} />
             </a>
             <a href="https://www.youtube.com/" target="_blank" rel="noreferrer" aria-label="YouTube" className="transition-all hover:scale-110">
-              <Youtube size={28} strokeWidth={1.5} />
+              <Youtube size={22} strokeWidth={1.5} />
             </a>
             <a href="https://www.facebook.com/" target="_blank" rel="noreferrer" aria-label="Facebook" className="transition-all hover:scale-110">
-              <Facebook size={28} strokeWidth={1.5} />
+              <Facebook size={22} strokeWidth={1.5} />
             </a>
           </div>
         </div>

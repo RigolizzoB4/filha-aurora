@@ -7,7 +7,7 @@ const HeroCarousel = ({ onCTAClick }) => {
   const slides = useMemo(() => ([
     { img: '/aperto.jpg', alt: 'Equipe em reunião de negócios', phrase: { pre: 'Conectando você ao melhor ', highlight: 'crédito', post: '' }, pos: 'center' },
     { img: '/assinatura.png', alt: 'Assinatura de contrato', phrase: { pre: 'Estruturação financeira que impulsiona ', highlight: 'decisões', post: '' }, pos: 'center' },
-    { img: '/amarelo_.png', alt: 'Edifício corporativo', phrase: { pre: 'Especialistas em viabilizar o seu ', highlight: 'próximo', post: ' passo' }, pos: 'center' },
+    { img: '/amarelo_.png', alt: 'Edifício corporativo', phrase: { pre: 'Especialistas em viabilizar o seu próximo ', highlight: 'passo', post: '' }, pos: 'center' },
   ]), []);
 
   const [index, setIndex] = useState(0);
@@ -98,7 +98,7 @@ const Home = () => {
       <section className="section-padding" style={{ background: '#f8f8f8' }}>
         <div className="container-custom">
 
-          <h2 className="text-3xl font-bold text-center mb-3" style={{ color: 'var(--b4-gray)' }}>
+          <h2 className="text-4xl font-bold text-center mb-3" style={{ color: 'var(--b4-gray)' }}>
             Por que escolher a <span style={{ color: '#f3ae3e' }}>B4</span>
           </h2>
 
