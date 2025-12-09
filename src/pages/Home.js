@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { CheckCircle, Users, Target, ChevronLeft, ChevronRight, Phone, TrendingUp } from 'lucide-react';
+import { CheckCircle, Users, Target, ChevronLeft, ChevronRight, Phone, TrendingUp, Search, Eye, Building2, Shield, MonitorSmartphone } from 'lucide-react';
 
 const HeroCarousel = () => {
   const slides = useMemo(() => ([
@@ -83,6 +83,102 @@ const Home = () => {
             <div className="relative h-full">
               <img src="https://customer-assets.emergentagent.com/job_finance-solutions-1/artifacts/t3on1tap_freepik__expand__12081-1536x512.png.webp" alt="Equipe B4" className="rounded-2xl shadow-2xl w-full h-full object-cover" />
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Nova seção: Por que escolher a B4 */}
+      <section className="section-padding" style={{ background: '#f8f8f8' }}>
+        <div className="container-custom">
+
+          <h2 className="text-4xl font-bold text-center mb-4" style={{ color: '#1a1a1a' }}>
+            Por que escolher a <span style={{ color: '#f3ae3e' }}>B4</span>
+          </h2>
+
+          <p className="text-center text-lg mb-16" style={{ color: '#818181', maxWidth: '700px', margin: '0 auto 60px' }}>
+            Assessoria especializada que vai além da captação de crédito
+          </p>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            {/* Card 1 */}
+            <div className="bg-white p-10 transition-all duration-300 hover:shadow-xl">
+              <div className="w-16 h-16 rounded-lg flex items-center justify-center mb-6" style={{ background: 'rgba(243, 174, 62, 0.1)' }}>
+                <Search size={32} style={{ color: '#f3ae3e' }} />
+              </div>
+              <h3 className="text-xl font-semibold mb-4" style={{ color: '#1a1a1a' }}>
+                Atendimento consultivo especializado
+              </h3>
+              <p style={{ color: '#666666', lineHeight: '1.6' }}>
+                Diagnóstico técnico e financeiro completo antes de sugerir qualquer linha de crédito.
+              </p>
+            </div>
+
+            {/* Card 2 */}
+            <div className="bg-white p-10 transition-all duration-300 hover:shadow-xl">
+              <div className="w-16 h-16 rounded-lg flex items-center justify-center mb-6" style={{ background: 'rgba(243, 174, 62, 0.1)' }}>
+                <Eye size={32} style={{ color: '#f3ae3e' }} />
+              </div>
+              <h3 className="text-xl font-semibold mb-4" style={{ color: '#1a1a1a' }}>
+                Visão externa do cenário
+              </h3>
+              <p style={{ color: '#666666', lineHeight: '1.6' }}>
+                Leitura clara e estruturada da situação financeira e alternativas disponíveis.
+              </p>
+            </div>
+
+            {/* Card 3 */}
+            <div className="bg-white p-10 transition-all duration-300 hover:shadow-xl">
+              <div className="w-16 h-16 rounded-lg flex items-center justify-center mb-6" style={{ background: 'rgba(243, 174, 62, 0.1)' }}>
+                <Target size={32} style={{ color: '#f3ae3e' }} />
+              </div>
+              <h3 className="text-xl font-semibold mb-4" style={{ color: '#1a1a1a' }}>
+                Melhor recomendação
+              </h3>
+              <p style={{ color: '#666666', lineHeight: '1.6' }}>
+                Comparamos propostas de múltiplas instituições para indicar a melhor solução.
+              </p>
+            </div>
+
+            {/* Card 4 */}
+            <div className="bg-white p-10 transition-all duration-300 hover:shadow-xl">
+              <div className="w-16 h-16 rounded-lg flex items-center justify-center mb-6" style={{ background: 'rgba(243, 174, 62, 0.1)' }}>
+                <Building2 size={32} style={{ color: '#f3ae3e' }} />
+              </div>
+              <h3 className="text-xl font-semibold mb-4" style={{ color: '#1a1a1a' }}>
+                Acesso multibanco
+              </h3>
+              <p style={{ color: '#666666', lineHeight: '1.6' }}>
+                Relacionamento com bancos, cooperativas, fundos e investidores.
+              </p>
+            </div>
+
+            {/* Card 5 */}
+            <div className="bg-white p-10 transition-all duration-300 hover:shadow-xl">
+              <div className="w-16 h-16 rounded-lg flex items-center justify-center mb-6" style={{ background: 'rgba(243, 174, 62, 0.1)' }}>
+                <Shield size={32} style={{ color: '#f3ae3e' }} />
+              </div>
+              <h3 className="text-xl font-semibold mb-4" style={{ color: '#1a1a1a' }}>
+                Ética e governança
+              </h3>
+              <p style={{ color: '#666666', lineHeight: '1.6' }}>
+                Código de ética formal e práticas de governança em todas as decisões.
+              </p>
+            </div>
+
+            {/* Card 6 */}
+            <div className="bg-white p-10 transition-all duration-300 hover:shadow-xl">
+              <div className="w-16 h-16 rounded-lg flex items-center justify-center mb-6" style={{ background: 'rgba(243, 174, 62, 0.1)' }}>
+                <MonitorSmartphone size={32} style={{ color: '#f3ae3e' }} />
+              </div>
+              <h3 className="text-xl font-semibold mb-4" style={{ color: '#1a1a1a' }}>
+                Atuação híbrida
+              </h3>
+              <p style={{ color: '#666666', lineHeight: '1.6' }}>
+                Atendimento presencial em Campinas e digital para todo Brasil.
+              </p>
+            </div>
+
           </div>
         </div>
       </section>
