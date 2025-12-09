@@ -91,91 +91,91 @@ const Home = () => {
       <section className="section-padding" style={{ background: '#f8f8f8' }}>
         <div className="container-custom">
 
-          <h2 className="text-4xl font-bold text-center mb-4" style={{ color: '#1a1a1a' }}>
+          <h2 className="text-3xl font-bold text-center mb-3" style={{ color: 'var(--b4-gray)' }}>
             Por que escolher a <span style={{ color: '#f3ae3e' }}>B4</span>
           </h2>
 
-          <p className="text-center text-lg mb-16" style={{ color: '#818181', maxWidth: '700px', margin: '0 auto 60px' }}>
+          <p className="text-center text-base mb-12" style={{ color: '#818181', maxWidth: '700px', margin: '0 auto 48px' }}>
             Assessoria especializada que vai além da captação de crédito
           </p>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
 
             {/* Card 1 */}
-            <div className="bg-white p-10 transition-all duration-300 hover:shadow-xl">
-              <div className="w-16 h-16 rounded-lg flex items-center justify-center mb-6" style={{ background: 'rgba(243, 174, 62, 0.1)' }}>
-                <Search size={32} style={{ color: '#f3ae3e' }} />
+            <div className="bg-white p-6">
+              <div className="mb-4">
+                <Search size={28} style={{ color: '#f3ae3e' }} strokeWidth={1.5} />
               </div>
-              <h3 className="text-xl font-semibold mb-4" style={{ color: '#1a1a1a' }}>
+              <h3 className="text-base font-semibold mb-2" style={{ color: '#1a1a1a' }}>
                 Atendimento consultivo especializado
               </h3>
-              <p style={{ color: '#666666', lineHeight: '1.6' }}>
+              <p className="text-sm" style={{ color: '#818181', lineHeight: '1.5' }}>
                 Diagnóstico técnico e financeiro completo antes de sugerir qualquer linha de crédito.
               </p>
             </div>
 
             {/* Card 2 */}
-            <div className="bg-white p-10 transition-all duration-300 hover:shadow-xl">
-              <div className="w-16 h-16 rounded-lg flex items-center justify-center mb-6" style={{ background: 'rgba(243, 174, 62, 0.1)' }}>
-                <Eye size={32} style={{ color: '#f3ae3e' }} />
+            <div className="bg-white p-6">
+              <div className="mb-4">
+                <Eye size={28} style={{ color: '#f3ae3e' }} strokeWidth={1.5} />
               </div>
-              <h3 className="text-xl font-semibold mb-4" style={{ color: '#1a1a1a' }}>
+              <h3 className="text-base font-semibold mb-2" style={{ color: '#1a1a1a' }}>
                 Visão externa do cenário
               </h3>
-              <p style={{ color: '#666666', lineHeight: '1.6' }}>
+              <p className="text-sm" style={{ color: '#818181', lineHeight: '1.5' }}>
                 Leitura clara e estruturada da situação financeira e alternativas disponíveis.
               </p>
             </div>
 
             {/* Card 3 */}
-            <div className="bg-white p-10 transition-all duration-300 hover:shadow-xl">
-              <div className="w-16 h-16 rounded-lg flex items-center justify-center mb-6" style={{ background: 'rgba(243, 174, 62, 0.1)' }}>
-                <Target size={32} style={{ color: '#f3ae3e' }} />
+            <div className="bg-white p-6">
+              <div className="mb-4">
+                <Target size={28} style={{ color: '#f3ae3e' }} strokeWidth={1.5} />
               </div>
-              <h3 className="text-xl font-semibold mb-4" style={{ color: '#1a1a1a' }}>
+              <h3 className="text-base font-semibold mb-2" style={{ color: '#1a1a1a' }}>
                 Melhor recomendação
               </h3>
-              <p style={{ color: '#666666', lineHeight: '1.6' }}>
+              <p className="text-sm" style={{ color: '#818181', lineHeight: '1.5' }}>
                 Comparamos propostas de múltiplas instituições para indicar a melhor solução.
               </p>
             </div>
 
             {/* Card 4 */}
-            <div className="bg-white p-10 transition-all duration-300 hover:shadow-xl">
-              <div className="w-16 h-16 rounded-lg flex items-center justify-center mb-6" style={{ background: 'rgba(243, 174, 62, 0.1)' }}>
-                <Building2 size={32} style={{ color: '#f3ae3e' }} />
+            <div className="bg-white p-6">
+              <div className="mb-4">
+                <Building2 size={28} style={{ color: '#f3ae3e' }} strokeWidth={1.5} />
               </div>
-              <h3 className="text-xl font-semibold mb-4" style={{ color: '#1a1a1a' }}>
+              <h3 className="text-base font-semibold mb-2" style={{ color: '#1a1a1a' }}>
                 Acesso multibanco
               </h3>
-              <p style={{ color: '#666666', lineHeight: '1.6' }}>
+              <p className="text-sm" style={{ color: '#818181', lineHeight: '1.5' }}>
                 Relacionamento com bancos, cooperativas, fundos e investidores.
               </p>
             </div>
 
             {/* Card 5 */}
-            <div className="bg-white p-10 transition-all duration-300 hover:shadow-xl">
-              <div className="w-16 h-16 rounded-lg flex items-center justify-center mb-6" style={{ background: 'rgba(243, 174, 62, 0.1)' }}>
-                <Shield size={32} style={{ color: '#f3ae3e' }} />
+            <div className="bg-white p-6">
+              <div className="mb-4">
+                <Shield size={28} style={{ color: '#f3ae3e' }} strokeWidth={1.5} />
               </div>
-              <h3 className="text-xl font-semibold mb-4" style={{ color: '#1a1a1a' }}>
+              <h3 className="text-base font-semibold mb-2" style={{ color: '#1a1a1a' }}>
                 Ética e governança
               </h3>
-              <p style={{ color: '#666666', lineHeight: '1.6' }}>
+              <p className="text-sm" style={{ color: '#818181', lineHeight: '1.5' }}>
                 Código de ética formal e práticas de governança em todas as decisões.
               </p>
             </div>
 
             {/* Card 6 */}
-            <div className="bg-white p-10 transition-all duration-300 hover:shadow-xl">
-              <div className="w-16 h-16 rounded-lg flex items-center justify-center mb-6" style={{ background: 'rgba(243, 174, 62, 0.1)' }}>
-                <MonitorSmartphone size={32} style={{ color: '#f3ae3e' }} />
+            <div className="bg-white p-6">
+              <div className="mb-4">
+                <MonitorSmartphone size={28} style={{ color: '#f3ae3e' }} strokeWidth={1.5} />
               </div>
-              <h3 className="text-xl font-semibold mb-4" style={{ color: '#1a1a1a' }}>
+              <h3 className="text-base font-semibold mb-2" style={{ color: '#1a1a1a' }}>
                 Atuação híbrida
               </h3>
-              <p style={{ color: '#666666', lineHeight: '1.6' }}>
-                Atendimento presencial em Campinas e digital para todo Brasil.
+              <p className="text-sm" style={{ color: '#818181', lineHeight: '1.5' }}>
+                Atendimento presencial em Campinas, Belo Horizonte, Fortaleza e digital para todo o Brasil.
               </p>
             </div>
 
