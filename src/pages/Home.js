@@ -106,7 +106,7 @@ const Home = () => {
               <div className="mb-4">
                 <Search size={28} style={{ color: '#f3ae3e' }} strokeWidth={1.5} />
               </div>
-              <h3 className="text-base font-semibold mb-2" style={{ color: '#1a1a1a' }}>
+              <h3 className="text-base font-semibold mb-2" style={{ color: '#818181' }}>
                 Atendimento consultivo especializado
               </h3>
               <p className="text-sm" style={{ color: '#818181', lineHeight: '1.5' }}>
@@ -119,7 +119,7 @@ const Home = () => {
               <div className="mb-4">
                 <Eye size={28} style={{ color: '#f3ae3e' }} strokeWidth={1.5} />
               </div>
-              <h3 className="text-base font-semibold mb-2" style={{ color: '#1a1a1a' }}>
+              <h3 className="text-base font-semibold mb-2" style={{ color: '#818181' }}>
                 Visão externa do cenário
               </h3>
               <p className="text-sm" style={{ color: '#818181', lineHeight: '1.5' }}>
@@ -132,7 +132,7 @@ const Home = () => {
               <div className="mb-4">
                 <Target size={28} style={{ color: '#f3ae3e' }} strokeWidth={1.5} />
               </div>
-              <h3 className="text-base font-semibold mb-2" style={{ color: '#1a1a1a' }}>
+              <h3 className="text-base font-semibold mb-2" style={{ color: '#818181' }}>
                 Melhor recomendação
               </h3>
               <p className="text-sm" style={{ color: '#818181', lineHeight: '1.5' }}>
@@ -145,7 +145,7 @@ const Home = () => {
               <div className="mb-4">
                 <Building2 size={28} style={{ color: '#f3ae3e' }} strokeWidth={1.5} />
               </div>
-              <h3 className="text-base font-semibold mb-2" style={{ color: '#1a1a1a' }}>
+              <h3 className="text-base font-semibold mb-2" style={{ color: '#818181' }}>
                 Acesso multibanco
               </h3>
               <p className="text-sm" style={{ color: '#818181', lineHeight: '1.5' }}>
@@ -158,7 +158,7 @@ const Home = () => {
               <div className="mb-4">
                 <Shield size={28} style={{ color: '#f3ae3e' }} strokeWidth={1.5} />
               </div>
-              <h3 className="text-base font-semibold mb-2" style={{ color: '#1a1a1a' }}>
+              <h3 className="text-base font-semibold mb-2" style={{ color: '#818181' }}>
                 Ética e governança
               </h3>
               <p className="text-sm" style={{ color: '#818181', lineHeight: '1.5' }}>
@@ -171,7 +171,7 @@ const Home = () => {
               <div className="mb-4">
                 <MonitorSmartphone size={28} style={{ color: '#f3ae3e' }} strokeWidth={1.5} />
               </div>
-              <h3 className="text-base font-semibold mb-2" style={{ color: '#1a1a1a' }}>
+              <h3 className="text-base font-semibold mb-2" style={{ color: '#818181' }}>
                 Atuação híbrida
               </h3>
               <p className="text-sm" style={{ color: '#818181', lineHeight: '1.5' }}>
@@ -199,80 +199,128 @@ const Home = () => {
 
             {/* TEXTO - DIREITA */}
             <div className="text-white">
-              <h2 className="text-4xl font-bold mb-6">
-                Conheça o Grupo <span className="bg-white/20 px-3 py-1 rounded">B4</span>
+              <h2 style={{
+                fontSize: '48px',
+                fontWeight: '700',
+                color: '#ffffff',
+                lineHeight: '1.2',
+                marginBottom: '24px',
+                letterSpacing: '-0.5px'
+              }}>
+                Conheça o Grupo <span>B4</span>
               </h2>
 
-              <p className="text-white text-lg leading-relaxed mb-8 opacity-95">
+              <p style={{
+                fontSize: '18px',
+                fontWeight: '400',
+                color: '#ffffff',
+                lineHeight: '1.7',
+                marginBottom: '32px',
+                opacity: '0.95'
+              }}>
                 O Grupo B4 nasce da união de sócios com décadas de experiência em crédito,
                 fomento mercantil e gestão de investimentos. A partir de Campinas/SP, atua
                 em todo território nacional, combinando tradição, tecnologia e governança
                 sólida para potencializar o sucesso financeiro de seus clientes.
               </p>
 
-              <p className="text-white text-base leading-relaxed mb-10 opacity-90">
-                A B4 Soluções Financeiras é a empresa do grupo focada em assessoria e
-                intermediação de crédito, conectando empresas e pessoas físicas às melhores
-                oportunidades no sistema financeiro e mercado de capitais.
-              </p>
-
-              <div className="space-y-6">
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
 
                 {/* Item 1 */}
-                <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center">
-                    <TrendingUp className="text-white" size={24} />
-                  </div>
+                <div style={{ display: 'flex', alignItems: 'flex-start', gap: '16px' }}>
+                  <TrendingUp style={{ color: '#ffffff', flexShrink: 0 }} size={24} />
                   <div>
-                    <h3 className="text-lg font-semibold text-white mb-1">
+                    <h3 style={{
+                      fontSize: '18px',
+                      fontWeight: '600',
+                      color: '#ffffff',
+                      lineHeight: '1.3',
+                      marginBottom: '4px'
+                    }}>
                       25+ anos de atuação
                     </h3>
-                    <p className="text-white/90 text-sm">
+                    <p style={{
+                      fontSize: '14px',
+                      fontWeight: '400',
+                      color: '#ffffff',
+                      lineHeight: '1.5',
+                      opacity: '0.85'
+                    }}>
                       Operações de crédito, fomento e fundos desde 1995.
                     </p>
                   </div>
                 </div>
 
                 {/* Item 2 */}
-                <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center">
-                    <MapPin className="text-white" size={24} />
-                  </div>
+                <div style={{ display: 'flex', alignItems: 'flex-start', gap: '16px' }}>
+                  <MapPin style={{ color: '#ffffff', flexShrink: 0 }} size={24} />
                   <div>
-                    <h3 className="text-lg font-semibold text-white mb-1">
+                    <h3 style={{
+                      fontSize: '18px',
+                      fontWeight: '600',
+                      color: '#ffffff',
+                      lineHeight: '1.3',
+                      marginBottom: '4px'
+                    }}>
                       Presença nacional
                     </h3>
-                    <p className="text-white/90 text-sm">
+                    <p style={{
+                      fontSize: '14px',
+                      fontWeight: '400',
+                      color: '#ffffff',
+                      lineHeight: '1.5',
+                      opacity: '0.85'
+                    }}>
                       Sede em Campinas/SP (Av. Coronel Silva Teles, 1002).
                     </p>
                   </div>
                 </div>
 
                 {/* Item 3 */}
-                <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center">
-                    <Users className="text-white" size={24} />
-                  </div>
+                <div style={{ display: 'flex', alignItems: 'flex-start', gap: '16px' }}>
+                  <Users style={{ color: '#ffffff', flexShrink: 0 }} size={24} />
                   <div>
-                    <h3 className="text-lg font-semibold text-white mb-1">
+                    <h3 style={{
+                      fontSize: '18px',
+                      fontWeight: '600',
+                      color: '#ffffff',
+                      lineHeight: '1.3',
+                      marginBottom: '4px'
+                    }}>
                       Time especializado
                     </h3>
-                    <p className="text-white/90 text-sm">
+                    <p style={{
+                      fontSize: '14px',
+                      fontWeight: '400',
+                      color: '#ffffff',
+                      lineHeight: '1.5',
+                      opacity: '0.85'
+                    }}>
                       Dezenas de profissionais dedicados à saúde financeira de empresas.
                     </p>
                   </div>
                 </div>
 
                 {/* Item 4 */}
-                <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center">
-                    <Target className="text-white" size={24} />
-                  </div>
+                <div style={{ display: 'flex', alignItems: 'flex-start', gap: '16px' }}>
+                  <Target style={{ color: '#ffffff', flexShrink: 0 }} size={24} />
                   <div>
-                    <h3 className="text-lg font-semibold text-white mb-1">
+                    <h3 style={{
+                      fontSize: '18px',
+                      fontWeight: '600',
+                      color: '#ffffff',
+                      lineHeight: '1.3',
+                      marginBottom: '4px'
+                    }}>
                       Compromisso sustentável
                     </h3>
-                    <p className="text-white/90 text-sm">
+                    <p style={{
+                      fontSize: '14px',
+                      fontWeight: '400',
+                      color: '#ffffff',
+                      lineHeight: '1.5',
+                      opacity: '0.85'
+                    }}>
                       Tradição, inovação e ética em todas as operações.
                     </p>
                   </div>
