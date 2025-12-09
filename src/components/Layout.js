@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { Menu, X, ChevronDown, Instagram, Linkedin, Youtube, Facebook } from 'lucide-react';
 import { Footer } from './Footer';
 
 const logoB4 = '/logo-b4-new.svg';
