@@ -26,12 +26,12 @@ export default function Header() {
         gap: '0'
       }}>
 
-        {/* ═══ LOGO 120px ═══ */}
+        {/* ═══ LOGO 160px ═══ */}
         <Link to="/" style={{ flexShrink: 0 }}>
           <img
             src="/logo-b4-new.svg"
             alt="B4 Soluções Financeiras"
-            style={{ height: '120px', width: 'auto', display: 'block' }}
+            style={{ height: '160px', width: 'auto', display: 'block' }}
           />
         </Link>
 

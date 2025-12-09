@@ -1,52 +1,170 @@
 import React from 'react';
-import { Phone, Mail } from 'lucide-react';
+import { Phone, Mail, MapPin } from 'lucide-react';
+import { Instagram, Linkedin, Youtube, Facebook } from 'lucide-react';
 
 const Contato = () => {
   return (
     <div className="overflow-hidden bg-white">
-      {/* Título simples */}
-      <section className="py-14 bg-white">
-        <div className="container-custom text-center">
-          <h1 className="text-4xl font-bold" style={{color:'#333'}}>Contato</h1>
-          <p className="text-lg" style={{color:'#666'}}>Estamos à disposição para atender você.</p>
-        </div>
-      </section>
-
-      {/* Informações e Mapa (sem formulário) */}
+      {/* Seção de Contato Unificada */}
       <section className="section-padding bg-white">
         <div className="container-custom">
-          <div className="grid lg:grid-cols-2 gap-16 items-start">
-            {/* Mapa Google (metade) */}
+          {/* Título Centralizado */}
+          <div className="text-center mb-16">
+            <h1 className="text-5xl font-extrabold mb-4" style={{ color: 'var(--b4-gray)' }}>
+              Contato
+            </h1>
+            <p className="text-lg" style={{ color: '#818181' }}>
+              Estamos à disposição para atender você.
+            </p>
+          </div>
+
+          {/* Grid 3 Colunas */}
+          <div className="grid lg:grid-cols-3 gap-12 items-start">
+
+            {/* Coluna 1: Mapa */}
             <div>
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">Onde estamos</h2>
+              <h2 className="text-2xl font-bold mb-6" style={{ color: 'var(--b4-gray)' }}>
+                Onde estamos
+              </h2>
               <div className="rounded-2xl overflow-hidden shadow-lg border border-gray-100">
                 <iframe
                   title="Mapa B4"
                   width="100%"
-                  height="420"
+                  height="500"
                   style={{ border: 0 }}
                   loading="lazy"
                   allowFullScreen
                   referrerPolicy="no-referrer-when-downgrade"
-                  src="https://www.google.com/maps?q=Av.%20Coronel%20Silva%20Teles%2C%201002%20-%20Cambu%C3%AD%2C%20Campinas%20-%20SP&output=embed"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.3032843647844!2d-47.05926092378555!3d-22.900847679226267!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c8c8f0e0e0e0e1%3A0x0!2sAv.%20Cel.%20Silva%20Teles%2C%201002%20-%20Cambu%C3%AD%2C%20Campinas%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1234567890"
                 />
+              </div>
+              <div className="mt-6 flex items-start gap-3">
+                <MapPin className="h-5 w-5 text-[var(--b4-saffron)] mt-1 flex-shrink-0" />
+                <p className="text-base" style={{ color: '#818181' }}>
+                  Av. Coronel Silva Teles, 1002<br />
+                  Cambuí, Campinas/SP
+                </p>
               </div>
             </div>
 
-            {/* Informações */}
+            {/* Coluna 2: Informações */}
             <div>
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">Fale com a B4 Soluções Financeiras</h2>
+              <h2 className="text-2xl font-bold mb-6" style={{ color: 'var(--b4-gray)' }}>
+                Fale conosco
+              </h2>
               <div className="space-y-6">
-                <div className="flex items-center"><Mail className="h-6 w-6 text-[var(--b4-orange)] mr-3" /><span className="text-gray-700">solucoes.financeiras@b4.com.br</span></div>
-                <div className="flex items-center"><Phone className="h-6 w-6 text-[var(--b4-orange)] mr-3" /><span className="text-gray-700">(19) 3751-4300</span></div>
-                <p className="text-gray-600">Av. Coronel Silva Teles, 1002 — Cambuí, Campinas/SP</p>
+                <div className="flex items-start gap-3">
+                  <Mail className="h-5 w-5 text-[var(--b4-saffron)] mt-1 flex-shrink-0" />
+                  <div>
+                    <p className="text-base font-semibold mb-1" style={{ color: 'var(--b4-gray)' }}>
+                      Email
+                    </p>
+                    <a
+                      href="mailto:solucoes.financeiras@b4.com.br"
+                      className="text-base hover:text-[var(--b4-saffron)] transition-colors"
+                      style={{ color: '#818181' }}
+                    >
+                      solucoes.financeiras@b4.com.br
+                    </a>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Phone className="h-5 w-5 text-[var(--b4-saffron)] mt-1 flex-shrink-0" />
+                  <div>
+                    <p className="text-base font-semibold mb-1" style={{ color: 'var(--b4-gray)' }}>
+                      Telefone
+                    </p>
+                    <a
+                      href="tel:+551937514300"
+                      className="text-base hover:text-[var(--b4-saffron)] transition-colors"
+                      style={{ color: '#818181' }}
+                    >
+                      (19) 3751-4300
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
+
+            {/* Coluna 3: Redes Sociais + Telefone/Email Adicional */}
+            <div>
+              <h2 className="text-2xl font-bold mb-6" style={{ color: 'var(--b4-gray)' }}>
+                Siga-nos
+              </h2>
+
+              {/* Grid 2x2 de Ícones */}
+              <div className="grid grid-cols-2 gap-4 mb-8 max-w-[180px]">
+                <SocialIcon href="https://instagram.com/grupob4" Icon={Instagram} />
+                <SocialIcon href="https://linkedin.com/company/grupob4" Icon={Linkedin} />
+                <SocialIcon href="https://youtube.com/@grupob4" Icon={Youtube} />
+                <SocialIcon href="https://facebook.com/grupob4" Icon={Facebook} />
+              </div>
+
+              {/* Telefone e Email adicionais abaixo dos ícones */}
+              <div className="space-y-4 mt-8 pt-8 border-t border-gray-200">
+                <div>
+                  <p className="text-sm font-semibold mb-1" style={{ color: 'var(--b4-gray)' }}>
+                    WhatsApp
+                  </p>
+                  <a
+                    href="https://wa.me/5519997943929"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-base hover:text-[var(--b4-saffron)] transition-colors"
+                    style={{ color: '#818181' }}
+                  >
+                    (19) 99794-3929
+                  </a>
+                </div>
+                <div>
+                  <p className="text-sm font-semibold mb-1" style={{ color: 'var(--b4-gray)' }}>
+                    Email alternativo
+                  </p>
+                  <a
+                    href="mailto:solucoes.financeiras@b4.com.br"
+                    className="text-base hover:text-[var(--b4-saffron)] transition-colors"
+                    style={{ color: '#818181' }}
+                  >
+                    solucoes.financeiras@b4.com.br
+                  </a>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
     </div>
   );
 };
+
+function SocialIcon({ href, Icon }) {
+  const [hovered, setHovered] = React.useState(false);
+
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      style={{
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        width: '80px',
+        height: '80px',
+        border: '2px solid #f3ae3e',
+        borderRadius: '12px',
+        color: '#f3ae3e',
+        transition: 'all 0.3s ease',
+        transform: hovered ? 'scale(1.05)' : 'scale(1)',
+        backgroundColor: hovered ? '#fef9f0' : 'transparent'
+      }}
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+    >
+      <Icon size={32} strokeWidth={1.5} />
+    </a>
+  );
+}
 
 export default Contato;
