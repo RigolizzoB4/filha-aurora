@@ -44,8 +44,8 @@ body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Rob
 .cta-split .cta-line { display: none; }
 /* Quadrado-trilho na cor da marca */
 .cta-split .cta-square { position: absolute; top: 50%; left: 18px; width: 16px; height: 16px; transform: translate(-50%, -50%); border: 2px solid var(--b4-saffron); background: transparent; z-index: 3; }
-/* Mais lento e para antes da borda (gap ~30px) entre texto e borda */
-.cta-split:hover .cta-square { animation: cta-travel 1.6s ease forwards; }
+/* Animação disparada pela classe .cta-animating, usada no clique */
+.cta-split.cta-animating .cta-square { animation: cta-travel 1.5s ease forwards; }
 @keyframes cta-travel { 0% { left: 18px; background: transparent; border-color: var(--b4-saffron); } 92% { left: calc(100% - 44px); background: transparent; border-color: var(--b4-saffron); } 100% { left: calc(100% - 44px); background: var(--b4-saffron); border-color: var(--b4-saffron); } }
 
 /* Overlay de identidade (leve para texto escuro) */

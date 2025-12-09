@@ -1,9 +1,8 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { CheckCircle, Users, Target, ChevronLeft, ChevronRight, Phone, TrendingUp, Search, Eye, Building2, Shield, MonitorSmartphone, MapPin } from 'lucide-react';
-import WhatsAppCard from '../components/WhatsAppCard';
 
-const HeroCarousel = ({ onCTAClick }) => {
+const HeroCarousel = ({ onCTAClick, ctaAnimating }) => {
   const slides = useMemo(() => ([
     { img: '/aperto.jpg', alt: 'Equipe em reunião de negócios', phrase: { pre: 'Conectando você ao melhor ', highlight: 'crédito', post: '' }, pos: 'center' },
     { img: '/assinatura.png', alt: 'Assinatura de contrato', phrase: { pre: 'Estruturação financeira que impulsiona ', highlight: 'decisões', post: '' }, pos: 'center' },
@@ -43,13 +42,17 @@ const HeroCarousel = ({ onCTAClick }) => {
             </h1>
             {/* CTA WhatsApp - Fale conosco */}
             <div className="flex gap-4">
-              <button type="button" onClick={onCTAClick} className="cta-split">
+              <a
+                href={onCTAClick.whatsappUrl}
+                onClick={onCTAClick.handleClick}
+                className={`cta-split ${ctaAnimating ? 'cta-animating' : ''}`}
+              >
                 <span className="cta-left">Fale</span>
                 <span className="cta-box">
                   <span className="cta-square" />
                   <span className="cta-mais">conosco</span>
                 </span>
-              </button>
+              </a>
             </div>
           </div>
         </div>
@@ -60,15 +63,29 @@ const HeroCarousel = ({ onCTAClick }) => {
 };
 
 const Home = () => {
-  const [showWhatsApp, setShowWhatsApp] = useState(false);
+  const phoneNumber = '5519997943929';
+  const defaultMessage = encodeURIComponent('Olá, gostaria de falar sobre soluções financeiras');
+  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${defaultMessage}`;
 
-  const handleCTAClick = () => {
-    setShowWhatsApp(true);
+  const [ctaAnimating, setCtaAnimating] = useState(false);
+
+  const handleCTAClick = (event) => {
+    event.preventDefault();
+    if (ctaAnimating) return;
+
+    setCtaAnimating(true);
+
+    setTimeout(() => {
+      window.location.href = whatsappUrl;
+    }, 1500);
   };
 
   return (
     <div className="overflow-hidden">
-      <HeroCarousel onCTAClick={handleCTAClick} />
+      <HeroCarousel
+        onCTAClick={{ handleClick: handleCTAClick, whatsappUrl }}
+        ctaAnimating={ctaAnimating}
+      />
 
       {/* Por que escolher a B4 Soluções Financeiras */}
       <section className="section-padding section-white">
@@ -332,13 +349,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-
-      {showWhatsApp && (
-        <WhatsAppCard
-          onClose={() => setShowWhatsApp(false)}
-          phoneNumber="5519997943929"
-        />
-      )}
     </div>
   );
 };
