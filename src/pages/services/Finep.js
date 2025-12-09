@@ -105,14 +105,6 @@ const Finep = () => {
             <p className="text-xl md:text-2xl text-gray-200 mb-8 leading-relaxed">
               Financiamento para projetos de inovação, pesquisa e desenvolvimento da sua empresa.
             </p>
-            
-            <Link 
-              to="/contato" 
-              className="btn-orange inline-flex items-center px-8 py-4 rounded-xl font-semibold text-lg"
-            >
-              Solicite uma Proposta
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
           </div>
         </div>
       </section>

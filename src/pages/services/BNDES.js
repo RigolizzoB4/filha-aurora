@@ -103,14 +103,6 @@ const BNDES = () => {
             <p className="text-xl md:text-2xl text-gray-200 mb-8 leading-relaxed">
               Acesso às melhores linhas de crédito do BNDES para máquinas, equipamentos e projetos de desenvolvimento.
             </p>
-            
-            <Link 
-              to="/contato" 
-              className="btn-orange inline-flex items-center px-8 py-4 rounded-xl font-semibold text-lg"
-            >
-              Solicite uma Proposta
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
           </div>
         </div>
       </section>

@@ -73,26 +73,9 @@ const HomeEquity = () => {
         
         <div className="container-custom relative z-10">
           <div className="max-w-4xl mx-auto text-center text-white">
-            <div className="inline-flex items-center bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-6">
-              <Home className="h-5 w-5 mr-2" />
-              <span className="text-white/90 text-sm font-medium">Solução Financeira</span>
-            </div>
-            
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              <span className="text-orange-500">Home</span> Equity
+              <span className="text-white">Home</span> <span style={{ color: '#f3ae3e' }}>Equity</span>
             </h1>
-            
-            <p className="text-xl md:text-2xl text-gray-200 mb-8 leading-relaxed">
-              Use seu imóvel como garantia e obtenha crédito com taxas de juros baixas e prazos longos.
-            </p>
-            
-            <Link 
-              to="/contato" 
-              className="btn-orange inline-flex items-center px-8 py-4 rounded-xl font-semibold text-lg"
-            >
-              Solicite uma Proposta
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
           </div>
         </div>
       </section>
@@ -102,8 +85,8 @@ const HomeEquity = () => {
         <div className="container-custom">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">
-                O que é um <span className="text-orange-500">Home Equity</span>?
+              <h2 className="text-4xl font-bold mb-6">
+                <span className="text-gray-900">O que é um</span> <span style={{ color: '#f3ae3e' }}>Home Equity</span>?
               </h2>
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
                 Home Equity é um crédito onde você usa seu imóvel como garantia para obter 
@@ -111,10 +94,10 @@ const HomeEquity = () => {
                 para quem precisa de recursos e possui um imóvel quitado ou com saldo devedor baixo.
               </p>
               
-              <div className="bg-orange-50 border-l-4 border-orange-500 p-6 rounded-r-xl">
-                <p className="text-orange-800 font-medium text-lg">
-                  “Home Equity é a solução ideal para transformar o valor do seu imóvel 
-                  em oportunidades reais.”
+              <div className="bg-yellow-50 border-l-4 p-6 rounded-r-xl" style={{ backgroundColor: 'rgba(243, 174, 62, 0.1)', borderLeftColor: '#f3ae3e' }}>
+                <p className="font-medium text-lg" style={{ color: '#f3ae3e' }}>
+                  "Home Equity é a solução ideal para transformar o valor do seu imóvel
+                  em oportunidades reais."
                 </p>
               </div>
             </div>
@@ -127,7 +110,7 @@ const HomeEquity = () => {
               />
               <div className="absolute -bottom-6 -right-6 bg-white p-6 rounded-xl shadow-lg border border-gray-100">
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-orange-500">Até 60%</div>
+                  <div className="text-2xl font-bold" style={{ color: '#f3ae3e' }}>Até 60%</div>
                   <div className="text-sm text-gray-600">do valor do imóvel</div>
                 </div>
               </div>
@@ -140,8 +123,8 @@ const HomeEquity = () => {
       <section className="section-padding bg-gray-50">
         <div className="container-custom">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Principais <span className="text-orange-500">Características</span>
+            <h2 className="text-4xl font-bold mb-4">
+              <span className="text-gray-900">Principais</span> <span style={{ color: '#f3ae3e' }}>Características</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Conheça as vantagens e benefícios do Home Equity da B4 Soluções Financeiras.
@@ -179,8 +162,8 @@ const HomeEquity = () => {
             </div>
             
             <div className="order-1 lg:order-2">
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">
-                <span className="text-orange-500">Vantagens</span> do Home Equity
+              <h2 className="text-4xl font-bold mb-6">
+                <span className="text-gray-900">Vantagens do</span> <span style={{ color: '#f3ae3e' }}>Home Equity</span>
               </h2>
               <p className="text-lg text-gray-600 mb-8">
                 Descubra por que o Home Equity é uma das modalidades de crédito mais vantajosas do mercado.
@@ -189,7 +172,7 @@ const HomeEquity = () => {
               <div className="space-y-4">
                 {vantagens.map((vantagem, index) => (
                   <div key={index} className="flex items-center">
-                    <CheckCircle className="h-6 w-6 text-orange-500 mr-4 flex-shrink-0" />
+                    <CheckCircle className="h-6 w-6 mr-4 flex-shrink-0" style={{ color: '#f3ae3e' }} />
                     <span className="text-gray-700 font-medium">{vantagem}</span>
                   </div>
                 ))}
