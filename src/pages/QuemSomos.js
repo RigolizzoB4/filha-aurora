@@ -72,24 +72,20 @@ const QuemSomos = () => {
     <div className="overflow-hidden">
       {/* Hero Section */}
       <section className="hero-section py-20 relative">
-        <div 
+        <div
           className="absolute inset-0 z-0"
           style={{
-            backgroundImage: `linear-gradient(rgba(31, 41, 55, 0.6), rgba(107, 114, 128, 0.6)), url('https://images.unsplash.com/photo-1517048676732-d65bc937f952')`,
+            backgroundImage: `linear-gradient(rgba(31, 41, 55, 0.5), rgba(31, 41, 55, 0.5)), url('/sala_comercial.png')`,
             backgroundSize: 'cover',
-            backgroundPosition: 'center'
+            backgroundPosition: 'center',
+            filter: 'contrast(1.1) brightness(0.95)'
           }}
         />
-        
+
         <div className="container-custom relative z-10 text-center text-white">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            Quem <span className="text-orange-500">Somos</span>
+            <span className="text-white">Quem</span> <span style={{ color: '#f3ae3e' }}>Somos</span>
           </h1>
-          <p className="text-xl md:text-2xl max-w-4xl mx-auto leading-relaxed">
-            A B4 Soluções Financeiras conecta empresas e pessoas às melhores oportunidades 
-            de captação de recursos, de forma ágil e estratégica, com ética e excelência 
-            em todas as etapas, apoiando nossos clientes antes, durante e após a operação.
-          </p>
         </div>
       </section>
 
