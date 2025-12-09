@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { CheckCircle, Users, Target, ChevronLeft, ChevronRight, Phone, TrendingUp, Search, Eye, Building2, Shield, MonitorSmartphone } from 'lucide-react';
+import { CheckCircle, Users, Target, ChevronLeft, ChevronRight, Phone, TrendingUp, Search, Eye, Building2, Shield, MonitorSmartphone, MapPin } from 'lucide-react';
 
 const HeroCarousel = () => {
   const slides = useMemo(() => ([
@@ -183,49 +183,104 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Conheça o Grupo B4 */}
-      <section className="section-padding section-orange">
+      {/* Conheça o Grupo B4 - REFORMULADO */}
+      <section className="section-padding" style={{ background: '#f3ae3e' }}>
         <div className="container-custom">
-          <div className="flex flex-col md:flex-row items-center gap-12">
-            {/* IMAGEM – FICA À ESQUERDA A PARTIR DO MD */}
-            <div className="w-full md:w-7/12">
-              <div className="relative w-full md:h-[380px] lg:h-[460px] rounded-3xl overflow-hidden shadow-2xl">
-                <img
-                  src="https://customer-assets.emergentagent.com/job_finance-solutions-1/artifacts/cfpnf5sv_frente%20vista%20de%20lado.png"
-                  alt="Grupo B4"
-                  className="absolute inset-0 w-full h-full object-cover"
-                />
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+
+            {/* FOTO - ESQUERDA */}
+            <div>
+              <img
+                src="https://customer-assets.emergentagent.com/job_finance-solutions-1/artifacts/cfpnf5sv_frente%20vista%20de%20lado.png"
+                alt="Grupo B4 - Escritório Campinas"
+                className="w-full h-[500px] object-cover rounded-2xl shadow-2xl"
+              />
+            </div>
+
+            {/* TEXTO - DIREITA */}
+            <div className="text-white">
+              <h2 className="text-4xl font-bold mb-6">
+                Conheça o Grupo <span className="bg-white/20 px-3 py-1 rounded">B4</span>
+              </h2>
+
+              <p className="text-white text-lg leading-relaxed mb-8 opacity-95">
+                O Grupo B4 nasce da união de sócios com décadas de experiência em crédito,
+                fomento mercantil e gestão de investimentos. A partir de Campinas/SP, atua
+                em todo território nacional, combinando tradição, tecnologia e governança
+                sólida para potencializar o sucesso financeiro de seus clientes.
+              </p>
+
+              <p className="text-white text-base leading-relaxed mb-10 opacity-90">
+                A B4 Soluções Financeiras é a empresa do grupo focada em assessoria e
+                intermediação de crédito, conectando empresas e pessoas físicas às melhores
+                oportunidades no sistema financeiro e mercado de capitais.
+              </p>
+
+              <div className="space-y-6">
+
+                {/* Item 1 */}
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center">
+                    <TrendingUp className="text-white" size={24} />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-white mb-1">
+                      25+ anos de atuação
+                    </h3>
+                    <p className="text-white/90 text-sm">
+                      Operações de crédito, fomento e fundos desde 1995.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Item 2 */}
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center">
+                    <MapPin className="text-white" size={24} />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-white mb-1">
+                      Presença nacional
+                    </h3>
+                    <p className="text-white/90 text-sm">
+                      Sede em Campinas/SP (Av. Coronel Silva Teles, 1002).
+                    </p>
+                  </div>
+                </div>
+
+                {/* Item 3 */}
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center">
+                    <Users className="text-white" size={24} />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-white mb-1">
+                      Time especializado
+                    </h3>
+                    <p className="text-white/90 text-sm">
+                      Dezenas de profissionais dedicados à saúde financeira de empresas.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Item 4 */}
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center">
+                    <Target className="text-white" size={24} />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-white mb-1">
+                      Compromisso sustentável
+                    </h3>
+                    <p className="text-white/90 text-sm">
+                      Tradição, inovação e ética em todas as operações.
+                    </p>
+                  </div>
+                </div>
+
               </div>
             </div>
 
-            {/* TEXTO – FICA À DIREITA A PARTIR DO MD */}
-            <div className="w-full md:w-5/12 text-white">
-              <h2 className="text-4xl font-bold mb-4">
-                <span className="text-white">Conheça o Grupo</span>{" "}
-                <span className="px-2 rounded-md bg-white/15 text-white">B4</span>
-              </h2>
-
-              <p className="text-white/90 mb-4 text-base leading-relaxed">
-                O Grupo B4 nasce da união de sócios com décadas de experiência em crédito,
-                fomento mercantil e gestão de investimentos. A partir de Campinas, no estado
-                de São Paulo, o grupo atua em todo o território nacional, combinando tradição,
-                tecnologia e governança sólida para potencializar o sucesso financeiro de seus clientes.
-              </p>
-
-              <p className="text-white/90 mb-6 text-base leading-relaxed">
-                A B4 Soluções Financeiras é a empresa do grupo focada em assessoria e
-                intermediação de crédito, aproximando empresas e pessoas físicas das melhores
-                alternativas de financiamento no sistema financeiro e no mercado de capitais.
-              </p>
-
-              <ul className="text-white/90 space-y-2 text-base">
-                <li>• Mais de 25 anos de atuação em operações de crédito, fomento mercantil e fundos de investimento.</li>
-                <li>• História consolidada, iniciada em 1995 e continuamente lapidada com foco no mercado financeiro.</li>
-                <li>• Presença nacional, com sede em Campinas/SP – Av. Coronel Silva Teles, 1002.</li>
-                <li>• Time especializado, com dezenas de profissionais dedicados à saúde financeira de milhares de empresas.</li>
-                <li>• Compromisso com crescimento sustentável, unindo tradição, inovação e ética em todas as etapas das operações.</li>
-              </ul>
-            </div>
           </div>
         </div>
       </section>
