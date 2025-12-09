@@ -159,7 +159,7 @@ export default function Header() {
           display: 'grid',
           gridTemplateColumns: '40px 40px',
           gridTemplateRows: '40px 40px',
-          gap: '0.5px',
+          gap: '0',
           flexShrink: 0
         }}>
 
