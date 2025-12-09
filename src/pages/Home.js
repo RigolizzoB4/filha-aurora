@@ -1,6 +1,7 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { CheckCircle, Users, Target, ChevronLeft, ChevronRight, Phone, TrendingUp, Search, Eye, Building2, Shield, MonitorSmartphone, MapPin } from 'lucide-react';
+import WhatsAppCard from '../components/WhatsAppCard';
 
 const HeroCarousel = ({ onCTAClick, ctaAnimating }) => {
   const slides = useMemo(() => ([
@@ -68,6 +69,7 @@ const Home = () => {
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${defaultMessage}`;
 
   const [ctaAnimating, setCtaAnimating] = useState(false);
+  const [showWhatsAppCard, setShowWhatsAppCard] = useState(false);
 
   const handleCTAClick = (event) => {
     event.preventDefault();
@@ -76,7 +78,8 @@ const Home = () => {
     setCtaAnimating(true);
 
     setTimeout(() => {
-      window.location.href = whatsappUrl;
+      setShowWhatsAppCard(true);
+      setCtaAnimating(false);
     }, 1500);
   };
 
@@ -86,6 +89,13 @@ const Home = () => {
         onCTAClick={{ handleClick: handleCTAClick, whatsappUrl }}
         ctaAnimating={ctaAnimating}
       />
+
+      {showWhatsAppCard && (
+        <WhatsAppCard
+          onClose={() => setShowWhatsAppCard(false)}
+          phoneNumber={phoneNumber}
+        />
+      )}
 
       {/* Por que escolher a B4 Soluções Financeiras */}
       <section className="section-padding section-white">

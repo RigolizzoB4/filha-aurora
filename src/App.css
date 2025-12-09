@@ -67,7 +67,7 @@ body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Rob
   }
 }
 
-/* Botão inteiro fica amarelo */
+/* Retângulo permanece transparente, apenas quadrado fica amarelo */
 @keyframes cta-fill {
   0% {
     background: transparent;
@@ -78,8 +78,8 @@ body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Rob
     border-color: #fff;
   }
   100% {
-    background: var(--b4-saffron);
-    border-color: var(--b4-saffron);
+    background: transparent;
+    border-color: #fff;
   }
 }
 
