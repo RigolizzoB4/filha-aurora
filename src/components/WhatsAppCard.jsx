@@ -7,11 +7,11 @@ const WhatsAppCard = ({ onClose, phoneNumber }) => {
 
   return (
     <div className="fixed bottom-6 right-6 z-50 animate-in slide-in-from-bottom-5 duration-500">
-      <div className="bg-white rounded-lg shadow-2xl border-2 border-[#f3ae3e] p-4 w-80">
+      <div className="bg-white rounded-lg shadow-2xl border-2 border-[var(--b4-saffron)] p-4 w-80">
         <div className="flex items-start justify-between mb-3">
           <div className="flex items-center gap-2">
-            <MessageCircle className="text-[#f3ae3e]" size={24} />
-            <h3 className="font-semibold text-[#1a1a1a]">Fale Conosco</h3>
+            <MessageCircle className="text-[var(--b4-saffron)]" size={24} />
+            <h3 className="font-semibold text-[var(--b4-black)]">Fale Conosco</h3>
           </div>
           <button
             onClick={onClose}

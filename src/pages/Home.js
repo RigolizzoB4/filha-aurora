@@ -14,12 +14,6 @@ const HeroCarousel = ({ onCTAClick }) => {
   const [hover, setHover] = useState(false);
   const timeoutRef = useRef(null);
 
-  const handleCTAClick = () => {
-    setTimeout(() => {
-      onCTAClick();
-    }, 2600);
-  };
-
   useEffect(() => {
     if (hover) return;
     timeoutRef.current && clearTimeout(timeoutRef.current);
@@ -49,7 +43,7 @@ const HeroCarousel = ({ onCTAClick }) => {
             </h1>
             {/* CTA WhatsApp - Fale conosco */}
             <div className="flex gap-4">
-              <button onClick={handleCTAClick} className="cta-split">
+              <button type="button" onClick={onCTAClick} className="cta-split">
                 <span className="cta-left">Fale</span>
                 <span className="cta-box">
                   <span className="cta-square" />
@@ -68,9 +62,17 @@ const HeroCarousel = ({ onCTAClick }) => {
 const Home = () => {
   const [showWhatsApp, setShowWhatsApp] = useState(false);
 
+  const handleCTAClick = () => {
+    const totalAnimationTime = 2600;
+
+    setTimeout(() => {
+      setShowWhatsApp(true);
+    }, totalAnimationTime);
+  };
+
   return (
     <div className="overflow-hidden">
-      <HeroCarousel onCTAClick={() => setShowWhatsApp(true)} />
+      <HeroCarousel onCTAClick={handleCTAClick} />
 
       {/* Por que escolher a B4 Soluções Financeiras */}
       <section className="section-padding section-white">

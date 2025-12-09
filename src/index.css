@@ -54,6 +54,16 @@ code {
         --b4-desert-storm: #f6f6f5;
         --b4-saffron: #f3ae3e;
         --b4-gray-nickel: #babcb4;
+
+        /* Paleta Oficial B4 */
+        --b4-nobel: #b4b4b4;
+        --b4-desert: #ededea;
+        --b4-white: #ffffff;
+        --b4-black: #1a1a1a;
+
+        /* Backgrounds */
+        --bg-light: #f8f8f8;
+        --bg-white: #ffffff;
     }
   .dark {
         --background: 0 0% 3.9%;
@@ -92,4 +102,36 @@ code {
   body {
     @apply bg-background text-foreground;
     }
+}
+
+.section-padding {
+  padding: 100px 0;
+}
+
+.section-white {
+  background: var(--b4-white);
+}
+
+.section-light {
+  background: var(--bg-light);
+}
+
+.section-saffron {
+  background: var(--b4-saffron);
+}
+
+.container-custom {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 80px;
+}
+
+@media (max-width: 768px) {
+  .container-custom {
+    padding: 0 24px;
+  }
+
+  .section-padding {
+    padding: 60px 0;
+  }
 }
