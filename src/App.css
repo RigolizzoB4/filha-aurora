@@ -37,16 +37,51 @@ body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Rob
 /* CTA SPLIT (Insights Financeiros) – fino e comprido, cor da marca */
 .cta-split { position: relative; display: inline-flex; align-items: center; gap: 10px; color: var(--b4-white); }
 .cta-split .cta-left { font-weight: 500; font-size: 16px; color: var(--b4-white); }
-/* Retângulo branco mais curto e fino */
-.cta-split .cta-box { position: relative; display: inline-flex; align-items: center; justify-content: center; height: 38px; padding: 0 30px 0 40px; border: 2px solid #fff; border-radius: 8px; overflow: hidden; }
-/* "Financeiros" (maior que Insights) */
-.cta-split .cta-mais { position: relative; z-index: 1; font-weight: 700; font-size: 18px; color: #fff; }
+/* Retângulo simétrico e mais largo */
+.cta-split .cta-box { position: relative; display: inline-flex; align-items: center; justify-content: center; height: 38px; padding: 0 48px; border: 2px solid #fff; border-radius: 8px; overflow: hidden; background: transparent; }
+/* "conosco" - texto fica ATRÁS do quadrado */
+.cta-split .cta-mais { position: relative; z-index: 2; font-weight: 700; font-size: 18px; color: #fff; }
 .cta-split .cta-line { display: none; }
-/* Quadrado-trilho na cor da marca */
-.cta-split .cta-square { position: absolute; top: 50%; left: 18px; width: 16px; height: 16px; transform: translate(-50%, -50%); border: 2px solid var(--b4-saffron); background: transparent; z-index: 3; }
-/* Animação disparada pela classe .cta-animating, usada no clique */
+/* Quadrado animado - passa POR CIMA da palavra */
+.cta-split .cta-square { position: absolute; top: 50%; left: 24px; width: 16px; height: 16px; transform: translate(-50%, -50%); border: 2px solid var(--b4-saffron); background: transparent; z-index: 3; }
+/* Animações disparadas no clique */
 .cta-split.cta-animating .cta-square { animation: cta-travel 1.5s ease forwards; }
-@keyframes cta-travel { 0% { left: 18px; background: transparent; border-color: var(--b4-saffron); } 92% { left: calc(100% - 44px); background: transparent; border-color: var(--b4-saffron); } 100% { left: calc(100% - 44px); background: var(--b4-saffron); border-color: var(--b4-saffron); } }
+.cta-split.cta-animating .cta-box { animation: cta-fill 1.5s ease forwards; }
+
+/* Quadrado atravessa e para na direita */
+@keyframes cta-travel {
+  0% {
+    left: 24px;
+    background: transparent;
+    border-color: var(--b4-saffron);
+  }
+  33% {
+    left: calc(100% - 24px);
+    background: transparent;
+    border-color: var(--b4-saffron);
+  }
+  100% {
+    left: calc(100% - 24px);
+    background: var(--b4-saffron);
+    border-color: var(--b4-saffron);
+  }
+}
+
+/* Botão inteiro fica amarelo */
+@keyframes cta-fill {
+  0% {
+    background: transparent;
+    border-color: #fff;
+  }
+  33% {
+    background: transparent;
+    border-color: #fff;
+  }
+  100% {
+    background: var(--b4-saffron);
+    border-color: var(--b4-saffron);
+  }
+}
 
 /* Overlay de identidade (leve para texto escuro) */
 .hero-orange-overlay { background: linear-gradient(90deg, rgba(0,0,0,0.28) 0%, rgba(0,0,0,0.18) 45%, rgba(0,0,0,0.0) 65%); }
