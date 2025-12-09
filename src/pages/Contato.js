@@ -10,10 +10,10 @@ const Contato = () => {
         <div className="container-custom">
           {/* Título Centralizado */}
           <div className="text-center mb-16">
-            <h1 className="text-5xl font-extrabold mb-4" style={{ color: 'var(--b4-gray)' }}>
+            <h1 className="text-4xl font-extrabold mb-4" style={{ color: 'var(--b4-gray)' }}>
               Contato
             </h1>
-            <p className="text-lg" style={{ color: '#818181' }}>
+            <p className="text-base" style={{ color: '#818181' }}>
               Estamos à disposição para atender você.
             </p>
           </div>

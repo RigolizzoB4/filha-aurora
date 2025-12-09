@@ -22,7 +22,7 @@ export default function Header() {
         height: '180px',
         maxWidth: '1920px',
         margin: '0 auto',
-        padding: '0 150px',
+        padding: '0 100px',
         gap: '0'
       }}>
 
@@ -159,7 +159,7 @@ export default function Header() {
           display: 'grid',
           gridTemplateColumns: '40px 40px',
           gridTemplateRows: '40px 40px',
-          gap: '2px',
+          gap: '1px',
           flexShrink: 0
         }}>
 

@@ -36,7 +36,7 @@ const HeroCarousel = ({ onCTAClick }) => {
       <div className="relative z-10 h-full">
         <div className="container-custom h-full flex items-center">
           <div className="max-w-3xl">
-            <h1 className="hero-readable-shadow text-white text-5xl font-extrabold leading-tight mb-6">
+            <h1 className="hero-readable-shadow text-white text-4xl font-extrabold leading-tight mb-6">
               <span className="text-white">{slides[index].phrase.pre}</span>
               <span className="text-[var(--b4-saffron)]">{slides[index].phrase.highlight}</span>
               <span className="text-white">{slides[index].phrase.post}</span>
@@ -75,10 +75,10 @@ const Home = () => {
         <div className="container-custom">
           <div className="grid lg:grid-cols-2 gap-16 items-stretch">
             <div>
-              <h2 className="text-5xl font-extrabold mb-6">
+              <h2 className="text-4xl font-extrabold mb-6">
                 <span className="text-[var(--b4-gray)]">B4</span> <span className="text-[var(--b4-saffron)]">Soluções Financeiras</span>
               </h2>
-              <p className="text-[var(--b4-gray)] leading-relaxed mb-8 text-lg">
+              <p className="text-[var(--b4-gray)] leading-relaxed mb-8 text-base">
                 A B4 Soluções Financeiras conecta empresas e pessoas às melhores oportunidades de captação de recursos, de forma ágil e estratégica. Atuamos ao lado do cliente antes, durante e depois da operação para que cada decisão financeira seja segura, sustentável e alinhada às necessidades do negócio.
               </p>
               <div className="space-y-6 text-[var(--b4-gray)] leading-relaxed">
@@ -98,11 +98,11 @@ const Home = () => {
       <section className="section-padding" style={{ background: '#f8f8f8' }}>
         <div className="container-custom">
 
-          <h2 className="text-5xl font-extrabold text-center mb-3" style={{ color: 'var(--b4-gray)' }}>
+          <h2 className="text-4xl font-extrabold text-center mb-3" style={{ color: 'var(--b4-gray)' }}>
             Por que escolher a <span style={{ color: '#f3ae3e' }}>B4</span>
           </h2>
 
-          <p className="text-center text-lg mb-12" style={{ color: '#818181', maxWidth: '700px', margin: '0 auto 48px' }}>
+          <p className="text-center text-base mb-12" style={{ color: '#818181', maxWidth: '700px', margin: '0 auto 48px' }}>
             Assessoria especializada que vai além da captação de crédito
           </p>
 
@@ -206,7 +206,7 @@ const Home = () => {
 
             {/* TEXTO - DIREITA */}
             <div className="text-white">
-              <h2 className="text-5xl font-extrabold mb-6" style={{
+              <h2 className="text-4xl font-extrabold mb-6" style={{
                 color: '#ffffff',
                 lineHeight: '1.2',
                 letterSpacing: '-0.5px'
@@ -214,7 +214,7 @@ const Home = () => {
                 Conheça o Grupo <span>B4</span>
               </h2>
 
-              <p className="text-lg leading-relaxed mb-8" style={{
+              <p className="text-base leading-relaxed mb-8" style={{
                 color: '#ffffff',
                 opacity: '0.95'
               }}>

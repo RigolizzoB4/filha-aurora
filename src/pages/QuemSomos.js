@@ -82,7 +82,7 @@ const QuemSomos = () => {
         />
         
         <div className="container-custom relative z-10 text-center text-white">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6">
             Quem <span className="text-orange-500">Somos</span>
           </h1>
           <p className="text-xl md:text-2xl max-w-4xl mx-auto leading-relaxed">
