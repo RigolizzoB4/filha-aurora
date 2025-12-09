@@ -26,18 +26,25 @@ const Contato = () => {
               <h2 className="text-2xl font-bold mb-6" style={{ color: 'var(--b4-gray)' }}>
                 Onde estamos
               </h2>
-              <div className="rounded-2xl overflow-hidden shadow-lg border border-gray-100">
-                <iframe
-                  title="Mapa B4"
-                  width="100%"
-                  height="500"
-                  style={{ border: 0 }}
-                  loading="lazy"
-                  allowFullScreen
-                  referrerPolicy="no-referrer-when-downgrade"
-                  src="https://www.google.com/maps?q=Av.+Coronel+Silva+Teles,+1002+-+Cambu%C3%AD,+Campinas+-+SP&output=embed"
-                />
-              </div>
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=Av.+Coronel+Silva+Teles,+1002+-+Cambuí,+Campinas+-+SP"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-xl transition-shadow"
+              >
+                <div style={{ width: '100%', height: '500px', position: 'relative' }}>
+                  <iframe
+                    title="Mapa B4"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    loading="lazy"
+                    allowFullScreen
+                    referrerPolicy="no-referrer-when-downgrade"
+                    src="https://maps.google.com/maps?width=100%25&amp;height=500&amp;hl=en&amp;q=Av.%20Coronel%20Silva%20Teles,%201002,%20Cambu%C3%AD,%20Campinas,%20SP+(B4%20Solu%C3%A7%C3%B5es%20Financeiras)&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+                  />
+                </div>
+              </a>
               <div className="mt-6 flex items-start gap-3">
                 <MapPin className="h-5 w-5 text-[var(--b4-saffron)] mt-1 flex-shrink-0" />
                 <p className="text-base" style={{ color: '#818181' }}>

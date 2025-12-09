@@ -157,9 +157,9 @@ export default function Header() {
         {/* ═══ ÍCONES GRID 2×2 ═══ */}
         <div style={{
           display: 'grid',
-          gridTemplateColumns: '45px 45px',
-          gridTemplateRows: '45px 45px',
-          gap: '8px',
+          gridTemplateColumns: '40px 40px',
+          gridTemplateRows: '40px 40px',
+          gap: '2px',
           flexShrink: 0
         }}>
 
@@ -251,12 +251,12 @@ function SocialIcon({ href, Icon }) {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        width: '45px',
-        height: '45px',
+        width: '40px',
+        height: '40px',
         color: '#f3ae3e'
       }}
     >
-      <Icon size={24} strokeWidth={1.5} />
+      <Icon size={20} strokeWidth={1.5} />
     </a>
   );
 }
