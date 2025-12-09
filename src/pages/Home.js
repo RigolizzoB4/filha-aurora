@@ -42,21 +42,12 @@ const HeroCarousel = () => {
             </h1>
             {/* CTA WhatsApp - Fale conosco */}
             <div className="flex gap-4">
-              <a
-                href="https://wa.me/5519997943929?text=Olá! Gostaria de falar sobre soluções financeiras."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group relative inline-flex items-center gap-3 px-8 py-4 bg-transparent border-2 border-white text-white text-lg font-medium overflow-hidden transition-all duration-300 hover:bg-white hover:text-[#f3ae3e]"
-              >
-                <span className="relative z-10">Fale</span>
-
-                {/* Quadrado animado */}
-                <span className="relative z-10 w-8 h-8 bg-[#f3ae3e] group-hover:bg-[#f3ae3e] transition-colors" />
-
-                <span className="relative z-10">conosco</span>
-
-                {/* Efeito hover */}
-                <span className="absolute inset-0 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500" />
+              <a href="https://wa.me/5519997943929?text=Olá! Gostaria de falar sobre soluções financeiras." target="_blank" rel="noopener noreferrer" className="cta-split">
+                <span className="cta-left">Fale</span>
+                <span className="cta-box">
+                  <span className="cta-square" />
+                  <span className="cta-mais">conosco</span>
+                </span>
               </a>
             </div>
           </div>
