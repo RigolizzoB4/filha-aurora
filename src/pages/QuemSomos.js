@@ -75,7 +75,7 @@ const QuemSomos = () => {
         <div
           className="absolute inset-0 z-0"
           style={{
-            backgroundImage: `linear-gradient(rgba(31, 41, 55, 0.5), rgba(31, 41, 55, 0.5)), url('/sala_comercial.png')`,
+            backgroundImage: `linear-gradient(rgba(31, 41, 55, 0.5), rgba(31, 41, 55, 0.5)), url('/sala_comercial.jpg')`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             filter: 'contrast(1.1) brightness(0.95)'
