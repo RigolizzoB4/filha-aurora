@@ -35,7 +35,7 @@ const Contato = () => {
                   loading="lazy"
                   allowFullScreen
                   referrerPolicy="no-referrer-when-downgrade"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.3032843647844!2d-47.05926092378555!3d-22.900847679226267!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c8c8f0e0e0e0e1%3A0x0!2sAv.%20Cel.%20Silva%20Teles%2C%201002%20-%20Cambu%C3%AD%2C%20Campinas%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1234567890"
+                  src="https://www.google.com/maps?q=Av.+Coronel+Silva+Teles,+1002+-+Cambu%C3%AD,+Campinas+-+SP&output=embed"
                 />
               </div>
               <div className="mt-6 flex items-start gap-3">

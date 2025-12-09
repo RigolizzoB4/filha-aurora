@@ -19,19 +19,19 @@ export default function Header() {
       <div style={{
         display: 'flex',
         alignItems: 'center',
-        height: '140px',
+        height: '180px',
         maxWidth: '1920px',
         margin: '0 auto',
         padding: '0 150px',
         gap: '0'
       }}>
 
-        {/* ═══ LOGO 160px ═══ */}
+        {/* ═══ LOGO 180px ═══ */}
         <Link to="/" style={{ flexShrink: 0 }}>
           <img
             src="/logo-b4-new.svg"
             alt="B4 Soluções Financeiras"
-            style={{ height: '160px', width: 'auto', display: 'block' }}
+            style={{ height: '180px', width: 'auto', display: 'block' }}
           />
         </Link>
 
@@ -154,12 +154,12 @@ export default function Header() {
         {/* ═══ ESPAÇADOR ═══ */}
         <div style={{ flex: 1 }} />
 
-        {/* ═══ ÍCONES GRID 2×2 (120×120) ═══ */}
+        {/* ═══ ÍCONES GRID 2×2 ═══ */}
         <div style={{
           display: 'grid',
-          gridTemplateColumns: '55px 55px',
-          gridTemplateRows: '55px 55px',
-          gap: '10px',
+          gridTemplateColumns: '45px 45px',
+          gridTemplateRows: '45px 45px',
+          gap: '8px',
           flexShrink: 0
         }}>
 
@@ -242,8 +242,6 @@ function DropdownLink({ href, children }) {
 }
 
 function SocialIcon({ href, Icon }) {
-  const [hovered, setHovered] = React.useState(false);
-
   return (
     <a
       href={href}
@@ -253,16 +251,12 @@ function SocialIcon({ href, Icon }) {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        width: '55px',
-        height: '55px',
-        color: '#f3ae3e',
-        transition: 'all 0.2s ease',
-        transform: hovered ? 'scale(1.1)' : 'scale(1)'
+        width: '45px',
+        height: '45px',
+        color: '#f3ae3e'
       }}
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
     >
-      <Icon size={28} strokeWidth={1.5} />
+      <Icon size={24} strokeWidth={1.5} />
     </a>
   );
 }
