@@ -19,7 +19,7 @@ export function Footer() {
           </p>
 
           {/* Redes Sociais em linha */}
-          <div className="flex gap-[0.5px] mb-6">
+          <div className="flex gap-4 mb-6">
             <a
               href="https://instagram.com/grupob4"
               target="_blank"
